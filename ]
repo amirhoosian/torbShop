@@ -1,0 +1,71 @@
+"use client";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import Image from "next/image";
+
+interface Banner {
+	id: number;
+	image: string;
+}
+
+function BannerCard({ image }: Banner) {
+	return (
+		<div className="relative rounded-xl  flex items-center justify-center h-[25rem]">
+			<Image
+				src={image}
+				alt={"banner"}
+				fill
+				className="object-cover"
+				priority
+			/>
+		</div>
+	);
+}
+
+export default function BannerSlider({ banners }: { banners: Banner[] }) {
+	return (
+		<div className="w-full relative">
+			<Swiper
+				modules={[Navigation, Pagination, Autoplay]}
+				navigation={{
+					nextEl: ".custom-next",
+					prevEl: ".custom-prev",
+				}}
+				pagination={{
+					el: ".swiper-pagination",
+					clickable: true,
+				}}
+				autoplay={{
+					delay: 4000,
+					disableOnInteraction: false,
+				}}
+				onSlideChange={(swiper) => swiper.pagination.update()}
+				loop
+				slidesPerView={1}
+				className="rounded-xl overflow-hidden"
+			>
+				{banners.map((b) => (
+					<SwiperSlide key={b.id}>
+						<BannerCard {...b} />
+					</SwiperSlide>
+				))}
+			</Swiper>
+			<button
+				className="custom-prev${uniqueId} absolute bottom-5    left-[calc(47%-80px)] z-20 w-8 h-8 flex items-center justify-center 
+        bg-white rounded-full shadow-md text-gray-600 hover:bg-gray-100 transition-all"
+			>
+				<span className="text-lg font-bold">‹</span>
+			</button>
+
+			<button
+				className="custom-next${uniqueId} absolute bottom-5 right-[calc(47%-80px)] z-20 w-8 h-8 flex items-center justify-center 
+        bg-white rounded-full shadow-md text-gray-600 hover:bg-gray-100 transition-all"
+			>
+				<span className="text-lg font-bold">›</span>
+			</button>
+		</div>
+	);
+}

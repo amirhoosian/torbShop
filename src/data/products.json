@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "گوشی هوشمند پیشرفته",
+    "price": 899,
+    "description": "گوشی هوشمند با دوربین پیشرفته و عملکرد بالا",
+    "category": "electronics",
+    "image": "/images/products/1-18.webp",
+    "rating": { "rate": 4.5, "count": 120 }
+  },
+  {
+    "id": 2,
+    "title": "گوشی هوشمند پریمیوم",
+    "price": 1299,
+    "description": "گوشی هوشمند پریمیوم با طراحی مدرن و ویژگی‌های پیشرفته",
+    "category": "electronics",
+    "image": "/images/products/1112249_22_600x600_t_g.webp",
+    "rating": { "rate": 4.8, "count": 150 }
+  },
+  {
+    "id": 3,
+    "title": "گوشی هوشمند کلاسیک",
+    "price": 599,
+    "description": "گوشی هوشمند با طراحی کلاسیک و عملکرد قابل اعتماد",
+    "category": "electronics",
+    "image": "/images/products/13-2.webp",
+    "rating": { "rate": 4.3, "count": 200 }
+  },
+  {
+    "id": 4,
+    "title": "گوشی هوشمند اقتصادی",
+    "price": 399,
+    "description": "گوشی هوشمند با قیمت مناسب و کیفیت خوب",
+    "category": "electronics",
+    "image": "/images/products/3-7.webp",
+    "rating": { "rate": 4.2, "count": 180 }
+  },
+  {
+    "id": 5,
+    "title": "گوشی هوشمند مدرن",
+    "price": 799,
+    "description": "گوشی هوشمند با طراحی مدرن و قابلیت‌های پیشرفته",
+    "category": "electronics",
+    "image": "/images/products/7-11.webp",
+    "rating": { "rate": 4.6, "count": 140 }
+  },
+  {
+    "id": 6,
+    "title": "گوشی هوشمند حرفه‌ای",
+    "price": 999,
+    "description": "گوشی هوشمند حرفه‌ای برای کاربران پیشرفته",
+    "category": "electronics",
+    "image": "/images/products/7-5.webp",
+    "rating": { "rate": 4.7, "count": 110 }
+  }
+]

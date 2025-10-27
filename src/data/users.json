@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "امیر محمدی",
+    "email": "amir@example.com",
+    "password": "password123",
+    "role": "admin",
+    "phone": "09123456789",
+    "address": {
+      "street": "خیابان ولیعصر، پلاک 123",
+      "city": "تهران",
+      "province": "تهران",
+      "postalCode": "1234567890"
+    },
+    "createdAt": "2024-01-15T08:30:00Z",
+    "isActive": true
+  },
+  {
+    "id": 2,
+    "name": "سارا احمدی",
+    "email": "sara@example.com",
+    "password": "password123",
+    "role": "customer",
+    "phone": "09123456788",
+    "address": {
+      "street": "خیابان انقلاب، پلاک 456",
+      "city": "تهران",
+      "province": "تهران",
+      "postalCode": "1234567891"
+    },
+    "createdAt": "2024-01-20T10:15:00Z",
+    "isActive": true
+  },
+  {
+    "id": 3,
+    "name": "علی رضایی",
+    "email": "ali@example.com",
+    "password": "password123",
+    "role": "customer",
+    "phone": "09123456787",
+    "address": {
+      "street": "خیابان آزادی، پلاک 789",
+      "city": "اصفهان",
+      "province": "اصفهان",
+      "postalCode": "8137654321"
+    },
+    "createdAt": "2024-02-01T14:22:00Z",
+    "isActive": true
+  },
+  {
+    "id": 4,
+    "name": "فاطمه کریمی",
+    "email": "fatemeh@example.com",
+    "password": "password123",
+    "role": "customer",
+    "phone": "09123456786",
+    "address": {
+      "street": "خیابان شریعتی، پلاک 321",
+      "city": "شیراز",
+      "province": "فارس",
+      "postalCode": "7137654321"
+    },
+    "createdAt": "2024-02-05T16:45:00Z",
+    "isActive": true
+  },
+  {
+    "id": 5,
+    "name": "محمد حسینی",
+    "email": "mohammad@example.com",
+    "password": "password123",
+    "role": "customer",
+    "phone": "09123456785",
+    "address": {
+      "street": "خیابان امام خمینی، پلاک 654",
+      "city": "مشهد",
+      "province": "خراسان رضوی",
+      "postalCode": "9137654321"
+    },
+    "createdAt": "2024-02-10T09:30:00Z",
+    "isActive": false
+  }
+]

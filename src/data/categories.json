@@ -1,0 +1,104 @@
+[
+  {
+    "id": 1,
+    "name": "الکترونیک",
+    "slug": "electronics",
+    "description": "گوشی، لپتاپ، تبلت و سایر محصولات الکترونیکی",
+    "image": "/images/categories/electronics.jpg",
+    "subcategories": [
+      {
+        "id": 11,
+        "name": "گوشی موبایل",
+        "slug": "mobile",
+        "description": "انواع گوشی هوشمند"
+      },
+      {
+        "id": 12,
+        "name": "لپتاپ",
+        "slug": "laptop",
+        "description": "لپتاپ های مختلف"
+      },
+      {
+        "id": 13,
+        "name": "تبلت",
+        "slug": "tablet",
+        "description": "تبلت های مختلف"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "پوشاک",
+    "slug": "clothing",
+    "description": "لباس مردانه، زنانه و بچگانه",
+    "image": "/images/categories/clothing.jpg",
+    "subcategories": [
+      {
+        "id": 21,
+        "name": "مردانه",
+        "slug": "men",
+        "description": "پوشاک مردانه"
+      },
+      {
+        "id": 22,
+        "name": "زنانه",
+        "slug": "women",
+        "description": "پوشاک زنانه"
+      },
+      {
+        "id": 23,
+        "name": "بچگانه",
+        "slug": "kids",
+        "description": "پوشاک کودکان"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "کتاب",
+    "slug": "books",
+    "description": "کتاب های فیزیکی و دیجیتال",
+    "image": "/images/categories/books.jpg",
+    "subcategories": [
+      {
+        "id": 31,
+        "name": "ادبیات",
+        "slug": "literature",
+        "description": "کتاب های ادبی"
+      },
+      {
+        "id": 32,
+        "name": "علمی",
+        "slug": "science",
+        "description": "کتاب های علمی"
+      },
+      {
+        "id": 33,
+        "name": "آموزشی",
+        "slug": "educational",
+        "description": "کتاب های آموزشی"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "خانه و آشپزخانه",
+    "slug": "home-kitchen",
+    "description": "لوازم خانه و آشپزخانه",
+    "image": "/images/categories/home.jpg",
+    "subcategories": [
+      {
+        "id": 41,
+        "name": "لوازم آشپزخانه",
+        "slug": "kitchen",
+        "description": "ظروف و لوازم آشپزخانه"
+      },
+      {
+        "id": 42,
+        "name": "دکوراسیون",
+        "slug": "decoration",
+        "description": "وسایل تزیینی خانه"
+      }
+    ]
+  }
+]
