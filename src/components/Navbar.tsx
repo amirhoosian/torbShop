@@ -1,6 +1,7 @@
 "use client";
+import { Search, ShoppingCart, User } from "lucide-react";
 import Image from "next/image";
-import { Search, User, ShoppingCart } from "lucide-react";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function Navbar() {
@@ -10,19 +11,19 @@ export default function Navbar() {
   const popular = ["گوشی", "لپ‌تاپ", "ساعت"];
 
   return (
-    <nav className="w-full flex px-2 py-7 items-center justify-between">
+    <nav className="flex w-full items-center justify-between px-2 py-7">
       <div className="flex">
         <Image
-          src="/icons/header-logo-desktop.svg"
-          alt="Logo"
-          width={100}
           height={100}
+          width={100}
+          alt="Logo"
+          src="/icons/header-logo-desktop.svg"
         />
         <Image
-          src="/icons/bg-logo-wave.png"
-          alt="Logo background wave"
-          width={100}
           height={100}
+          width={100}
+          alt="Logo background wave"
+          src="/icons/bg-logo-wave.png"
         />
 
         <div className="flex flex-col gap-2">
@@ -32,29 +33,29 @@ export default function Navbar() {
 
           {/* Search box */}
           <div className="relative">
-            <div className="flex h-fit py-1.5 px-2 rounded-3xl bg-gray-50 border border-gray-200 items-center gap-2">
+            <div className="flex h-fit items-center gap-2 rounded-3xl border border-gray-200 bg-gray-50 px-2 py-1.5">
               <Search size={20} className="text-gray-600" />
               <input
+                className="bg-transparent outline-none"
                 type="text"
                 value={query}
+                onBlur={() => setTimeout(() => setIsFocused(false), 200)}
                 onChange={(e) => setQuery(e.target.value)}
                 onFocus={() => setIsFocused(true)}
-                onBlur={() => setTimeout(() => setIsFocused(false), 200)}
                 placeholder="جستجوی محصول"
-                className="bg-transparent outline-none"
               />
             </div>
 
             {isFocused && (
-              <div className="absolute z-10 left-0 right-0 mt-2 bg-white rounded-xl shadow-lg border border-gray-100 p-3 animate-fade-in">
-                <p className="text-gray-500 text-xs mb-2">بیشترین جستجوها</p>
-                <div className="flex gap-2 flex-wrap">
+              <div className="animate-fade-in absolute right-0 left-0 z-10 mt-2 rounded-xl border border-gray-100 bg-white p-3 shadow-lg">
+                <p className="mb-2 text-xs text-gray-500">بیشترین جستجوها</p>
+                <div className="flex flex-wrap gap-2">
                   {popular.map((item) => (
                     <button
+                      className="rounded-full border border-gray-200 px-3 py-1 text-sm transition hover:bg-gray-100"
                       key={item}
                       type="button"
                       onMouseDown={() => setQuery(item)}
-                      className="px-3 py-1 text-sm rounded-full border border-gray-200 hover:bg-gray-100 transition"
                     >
                       {item}
                     </button>
@@ -67,13 +68,13 @@ export default function Navbar() {
       </div>
 
       <div className="flex flex-col items-center gap-6">
-        <div className="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 cursor-pointer">
+        <div className="flex cursor-pointer items-center gap-2 rounded-lg border border-gray-300 px-4 py-2 hover:bg-gray-50">
           <User size={18} className="text-gray-600" />
-          <a href="#" className="text-sm text-gray-700">
+          <Link className="text-sm text-gray-700" href="/login">
             وارد شوید
-          </a>
+          </Link>
         </div>
-        <div className="flex flex-col gap-2 relative">
+        <div className="relative flex flex-col gap-2">
           <div
             className="flex items-center gap-2"
             onMouseEnter={() => setIsOpen(true)}
@@ -84,13 +85,13 @@ export default function Navbar() {
           </div>
 
           {isOpen && (
-            <div className="absolute top-full right-0 mt-2 w-64 bg-white border border-gray-200 rounded-xl shadow-lg p-4 animate-fade-in z-10">
+            <div className="animate-fade-in absolute top-full right-0 z-10 mt-2 w-64 rounded-xl border border-gray-200 bg-white p-4 shadow-lg">
               <div className="flex flex-col items-center justify-center gap-3 py-2">
                 <ShoppingCart
                   size={40}
                   className="text-purple-500 opacity-80"
                 />
-                <p className="text-gray-600 text-sm font-medium">
+                <p className="text-sm font-medium text-gray-600">
                   سبد خرید خالی است!
                 </p>
               </div>

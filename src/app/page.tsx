@@ -1,9 +1,8 @@
 import HeroSection from "@/components/HeroSection";
-import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="font-sans w-full">
+    <div className="w-full font-sans">
       <HeroSection />
     </div>
   );
