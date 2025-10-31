@@ -6,11 +6,7 @@ import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-interface Banner {
-  id: number;
-  image: string;
-  title?: string;
-}
+import type { Banner } from "@/types";
 
 export default function BannerSlider({ banners }: { banners: Banner[] }) {
   const swiperRef = useRef<any>(null);

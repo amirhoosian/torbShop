@@ -1,0 +1,8 @@
+export const API_BASE_URL =
+  process.env.NEXT_PUBLIC_API_BASE_URL ?? "https://fakestoreapi.com";
+
+export const ENDPOINTS = {
+  PRODUCTS: "/products",
+  CATEGORIES: "/categories",
+  USERS: "/users",
+} as const;
