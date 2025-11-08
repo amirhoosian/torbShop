@@ -5,19 +5,12 @@ import type { NavigationOptions } from "swiper/types";
 import { useEffect, useRef, useState } from "react";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import type { Product } from "@/types";
 
 import BannerSlider from "./sliders/BannerCard";
 import ProductCard from "./sliders/ProductCard";
 import "swiper/css";
 import "swiper/css/navigation";
-
-export interface Product {
-  id: number;
-  title: string;
-
-  price: number;
-  image: string;
-}
 
 export default function HeroSection() {
   const [products, setProducts] = useState<Product[]>([]);
@@ -93,7 +86,7 @@ export default function HeroSection() {
           {products.map((product) => (
             <SwiperSlide key={product.id}>
               <ProductCard
-                image={product.image}
+                image={product.image ?? ""}
                 price={product.price}
                 title={product.title}
               />

@@ -1,11 +1,7 @@
 "use client";
 import Image from "next/image";
-
-interface ProductCardProps {
-  image: string;
-  title: string;
-  price: number;
-}
+import CountdownTimer from "../UI/CountdownTimer";
+import type { ProductCardProps } from "@/types";
 
 export default function ProductCard({ image, title, price }: ProductCardProps) {
   return (
@@ -27,8 +23,10 @@ export default function ProductCard({ image, title, price }: ProductCardProps) {
           priority
         />
       </div>
-
-      <div className="mt-4 flex w-full items-center justify-between px-3">
+      <div className="my-auto">
+        <p>{title}</p>
+      </div>
+      <div className="flex  flex-col w-full  px-3 mt-4 ">
         <div className="flex items-center gap-2">
           <span className="rounded-md bg-white px-2 py-1 text-sm font-bold text-pink-600">
             12%
@@ -45,6 +43,10 @@ export default function ProductCard({ image, title, price }: ProductCardProps) {
       >
         🛒
       </button>
+
+      <div className="absolute top-3 right-3 bg-white/20 rounded-lg px-3 py-1">
+        <CountdownTimer />
+      </div>
     </div>
   );
 }

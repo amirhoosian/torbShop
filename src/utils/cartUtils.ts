@@ -1,10 +1,4 @@
-export interface CartItem {
-  id: number;
-  title: string;
-  price: number;
-  quantity: number;
-  image: string;
-}
+import type { CartItem } from "@/types";
 
 export function getCartFromStorage(): CartItem[] {
   // Get cart items from localStorage

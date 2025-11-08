@@ -21,8 +21,18 @@ export interface Product {
 }
 
 export interface CartItem {
-  productId: number;
+  id: number;
+  title: string;
+  image: string;
   quantity: number;
+  price: number;
+}
+
+export interface Subcategory {
+  id: number | string;
+  name: string;
+  slug: string;
+  description?: string;
 }
 
 export interface Category {
@@ -30,6 +40,15 @@ export interface Category {
   name: string;
   slug: string;
   image?: string;
+  description?: string;
+  subcategories?: Subcategory[];
+}
+
+export interface Address {
+  street: string;
+  city: string;
+  province: string;
+  postalCode: string;
 }
 
 export interface User {
@@ -37,4 +56,19 @@ export interface User {
   name: string;
   email: string;
   role?: "admin" | "customer" | "moderator";
+  phone?: string;
+  address?: Address;
+  createdAt?: string;
+  isActive?: boolean;
+}
+
+export interface CategoryCardProps {
+  name: string;
+  image: string;
+}
+
+export interface ProductCardProps {
+  image: string;
+  title: string;
+  price: number;
 }

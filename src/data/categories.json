@@ -3,26 +3,32 @@
     "id": 1,
     "name": "الکترونیک",
     "slug": "electronics",
-    "description": "گوشی، لپتاپ، تبلت و سایر محصولات الکترونیکی",
+    "description": "گوشی، لپتاپ، تبلت و سایر محصولات دیجیتال",
     "image": "/images/categories/electronics.jpg",
     "subcategories": [
       {
         "id": 11,
         "name": "گوشی موبایل",
         "slug": "mobile",
-        "description": "انواع گوشی هوشمند"
+        "description": "انواع گوشی‌های هوشمند جدید"
       },
       {
         "id": 12,
         "name": "لپتاپ",
         "slug": "laptop",
-        "description": "لپتاپ های مختلف"
+        "description": "لپتاپ‌های حرفه‌ای و گیمینگ"
       },
       {
         "id": 13,
         "name": "تبلت",
         "slug": "tablet",
-        "description": "تبلت های مختلف"
+        "description": "تبلت‌های سبک و سریع"
+      },
+      {
+        "id": 14,
+        "name": "ساعت هوشمند",
+        "slug": "smartwatch",
+        "description": "ساعت‌های هوشمند و اسپرت"
       }
     ]
   },
@@ -30,53 +36,65 @@
     "id": 2,
     "name": "پوشاک",
     "slug": "clothing",
-    "description": "لباس مردانه، زنانه و بچگانه",
+    "description": "لباس مردانه، زنانه و بچگانه برای تمام فصول",
     "image": "/images/categories/clothing.jpg",
     "subcategories": [
       {
         "id": 21,
         "name": "مردانه",
         "slug": "men",
-        "description": "پوشاک مردانه"
+        "description": "پوشاک اسپرت و رسمی مردانه"
       },
       {
         "id": 22,
         "name": "زنانه",
         "slug": "women",
-        "description": "پوشاک زنانه"
+        "description": "لباس‌های مجلسی و راحتی زنانه"
       },
       {
         "id": 23,
         "name": "بچگانه",
         "slug": "kids",
-        "description": "پوشاک کودکان"
+        "description": "پوشاک مناسب کودکان"
+      },
+      {
+        "id": 24,
+        "name": "اکسسوری",
+        "slug": "accessories",
+        "description": "کیف، کمربند و کلاه"
       }
     ]
   },
   {
     "id": 3,
-    "name": "کتاب",
+    "name": "کتاب و تحصیلات",
     "slug": "books",
-    "description": "کتاب های فیزیکی و دیجیتال",
+    "description": "کتاب‌های چاپی، آموزشی و رمان‌های پرفروش",
     "image": "/images/categories/books.jpg",
     "subcategories": [
       {
         "id": 31,
         "name": "ادبیات",
         "slug": "literature",
-        "description": "کتاب های ادبی"
+        "description": "کتاب‌های شعر و داستان"
       },
       {
         "id": 32,
         "name": "علمی",
         "slug": "science",
-        "description": "کتاب های علمی"
+        "description": "کتاب‌های علمی و پژوهشی"
       },
       {
         "id": 33,
         "name": "آموزشی",
         "slug": "educational",
-        "description": "کتاب های آموزشی"
+        "description": "منابع یادگیری و آموزشی"
+      },
+      {
+        "id": 34,
+        "name": "کودک و نوجوان",
+        "slug": "kids-books",
+        "description": "کتاب‌های جذاب برای کودکان"
       }
     ]
   },
@@ -84,20 +102,188 @@
     "id": 4,
     "name": "خانه و آشپزخانه",
     "slug": "home-kitchen",
-    "description": "لوازم خانه و آشپزخانه",
+    "description": "وسایل دکوراتیو و لوازم خانه و آشپزخانه",
     "image": "/images/categories/home.jpg",
     "subcategories": [
       {
         "id": 41,
         "name": "لوازم آشپزخانه",
         "slug": "kitchen",
-        "description": "ظروف و لوازم آشپزخانه"
+        "description": "وسایل پخت و پز و سرو"
       },
       {
         "id": 42,
         "name": "دکوراسیون",
         "slug": "decoration",
-        "description": "وسایل تزیینی خانه"
+        "description": "تزیینات و وسایل منزل"
+      },
+      {
+        "id": 43,
+        "name": "وسایل خواب",
+        "slug": "bedroom",
+        "description": "رختخواب، پتو و ملحفه"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "ورزش و سلامت",
+    "slug": "sports-health",
+    "description": "محصولات ورزشی و تجهیزات سلامت",
+    "image": "/images/categories/sport.jpg",
+    "subcategories": [
+      {
+        "id": 51,
+        "name": "وسایل بدنسازی",
+        "slug": "gym",
+        "description": "ابزار تمرین و تناسب اندام"
+      },
+      {
+        "id": 52,
+        "name": "پوشاک ورزشی",
+        "slug": "sport-wear",
+        "description": "لباس ورزشی باکیفیت"
+      },
+      {
+        "id": 53,
+        "name": "وسایل تناسب اندام",
+        "slug": "fitness",
+        "description": "تجهیزات ورزشی خانگی"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "زیبایی و بهداشت",
+    "slug": "beauty",
+    "description": "محصولات آرایشی، مراقبت پوست و مو",
+    "image": "/images/categories/beauty.jpg",
+    "subcategories": [
+      {
+        "id": 61,
+        "name": "آرایش",
+        "slug": "makeup",
+        "description": "محصولات آرایشی صورت"
+      },
+      {
+        "id": 62,
+        "name": "مراقبت پوست",
+        "slug": "skin-care",
+        "description": "ماسک و کرم‌های پوستی"
+      },
+      {
+        "id": 63,
+        "name": "مراقبت مو",
+        "slug": "hair-care",
+        "description": "شامپو و نرم‌کننده مو"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "خودرو و ابزار",
+    "slug": "automotive",
+    "description": "ابزارآلات، قطعات خودرو و لوازم جانبی",
+    "image": "/images/categories/car.jpg",
+    "subcategories": [
+      {
+        "id": 71,
+        "name": "ابزار خودرو",
+        "slug": "car-tools",
+        "description": "ابزارهای فنی خودرو"
+      },
+      {
+        "id": 72,
+        "name": "قطعات یدکی",
+        "slug": "spare-parts",
+        "description": "قطعات مصرفی خودرو"
+      },
+      {
+        "id": 73,
+        "name": "لوازم جانبی",
+        "slug": "accessories",
+        "description": "تزیینات داخلی و بیرونی"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "غذا و نوشیدنی",
+    "slug": "food",
+    "description": "مواد غذایی، خوراکی و نوشیدنی‌های متنوع",
+    "image": "/images/categories/food.jpg",
+    "subcategories": [
+      {
+        "id": 81,
+        "name": "نوشیدنی",
+        "slug": "drinks",
+        "description": "نوشیدنی‌های سرد و گرم"
+      },
+      {
+        "id": 82,
+        "name": "میان وعده",
+        "slug": "snacks",
+        "description": "تنقلات و خوراکی‌ها"
+      },
+      {
+        "id": 83,
+        "name": "چاشنی و ادویه",
+        "slug": "spices",
+        "description": "ادویه و افزودنی‌های غذایی"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "هنر و موسیقی",
+    "slug": "art-music",
+    "description": "ابزار هنری و سازهای موسیقی",
+    "image": "/images/categories/art.jpg",
+    "subcategories": [
+      {
+        "id": 91,
+        "name": "سازها",
+        "slug": "instruments",
+        "description": "سازهای زهی و بادی"
+      },
+      {
+        "id": 92,
+        "name": "لوازم هنری",
+        "slug": "art-supplies",
+        "description": "ابزار نقاشی و طراحی"
+      },
+      {
+        "id": 93,
+        "name": "آموزش موسیقی",
+        "slug": "music-education",
+        "description": "یادگیری موسیقی و آواز"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "سفر و گردشگری",
+    "slug": "travel",
+    "description": "وسایل سفر، چمدان و تجهیزات کمپینگ",
+    "image": "/images/categories/travel.jpg",
+    "subcategories": [
+      {
+        "id": 101,
+        "name": "چمدان",
+        "slug": "luggage",
+        "description": "چمدان‌های سبک و مقاوم"
+      },
+      {
+        "id": 102,
+        "name": "تجهیزات کمپینگ",
+        "slug": "camping",
+        "description": "چادر و لوازم مسافرتی"
+      },
+      {
+        "id": 103,
+        "name": "وسایل سفر",
+        "slug": "travel-gear",
+        "description": "وسایل مورد نیاز مسافرت"
       }
     ]
   }
