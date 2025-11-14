@@ -4,7 +4,7 @@
     "name": "الکترونیک",
     "slug": "electronics",
     "description": "گوشی، لپتاپ، تبلت و سایر محصولات دیجیتال",
-    "image": "/images/categories/electronics.jpg",
+    "image": "/images/routes/home/category-slider-1.png",
     "subcategories": [
       {
         "id": 11,
@@ -37,7 +37,7 @@
     "name": "پوشاک",
     "slug": "clothing",
     "description": "لباس مردانه، زنانه و بچگانه برای تمام فصول",
-    "image": "/images/categories/clothing.jpg",
+    "image": "/images/routes/home/category-slider-2.png",
     "subcategories": [
       {
         "id": 21,
@@ -70,7 +70,7 @@
     "name": "کتاب و تحصیلات",
     "slug": "books",
     "description": "کتاب‌های چاپی، آموزشی و رمان‌های پرفروش",
-    "image": "/images/categories/books.jpg",
+    "image": "/images/routes/home/category-slider-3.png",
     "subcategories": [
       {
         "id": 31,
@@ -103,7 +103,7 @@
     "name": "خانه و آشپزخانه",
     "slug": "home-kitchen",
     "description": "وسایل دکوراتیو و لوازم خانه و آشپزخانه",
-    "image": "/images/categories/home.jpg",
+    "image": "/images/routes/home/category-slider-4.png",
     "subcategories": [
       {
         "id": 41,
@@ -130,7 +130,7 @@
     "name": "ورزش و سلامت",
     "slug": "sports-health",
     "description": "محصولات ورزشی و تجهیزات سلامت",
-    "image": "/images/categories/sport.jpg",
+    "image": "/images/routes/home/category-slider-5.png",
     "subcategories": [
       {
         "id": 51,
@@ -157,7 +157,7 @@
     "name": "زیبایی و بهداشت",
     "slug": "beauty",
     "description": "محصولات آرایشی، مراقبت پوست و مو",
-    "image": "/images/categories/beauty.jpg",
+    "image": "/images/routes/home/category-slider-6.png",
     "subcategories": [
       {
         "id": 61,
@@ -184,7 +184,7 @@
     "name": "خودرو و ابزار",
     "slug": "automotive",
     "description": "ابزارآلات، قطعات خودرو و لوازم جانبی",
-    "image": "/images/categories/car.jpg",
+    "image": "/images/routes/home/category-slider-7.png",
     "subcategories": [
       {
         "id": 71,
@@ -211,7 +211,7 @@
     "name": "غذا و نوشیدنی",
     "slug": "food",
     "description": "مواد غذایی، خوراکی و نوشیدنی‌های متنوع",
-    "image": "/images/categories/food.jpg",
+    "image": "/images/routes/home/category-slider-1.png",
     "subcategories": [
       {
         "id": 81,
@@ -238,7 +238,7 @@
     "name": "هنر و موسیقی",
     "slug": "art-music",
     "description": "ابزار هنری و سازهای موسیقی",
-    "image": "/images/categories/art.jpg",
+    "image": "/images/routes/home/category-slider-2.png",
     "subcategories": [
       {
         "id": 91,
@@ -265,7 +265,7 @@
     "name": "سفر و گردشگری",
     "slug": "travel",
     "description": "وسایل سفر، چمدان و تجهیزات کمپینگ",
-    "image": "/images/categories/travel.jpg",
+    "image": "/images/routes/home/category-slider-3.png",
     "subcategories": [
       {
         "id": 101,

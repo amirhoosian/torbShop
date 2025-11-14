@@ -9,7 +9,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import type { Category } from "@/types";
 
-import CategoryCard from "../UI/CategoryCard";
+import CategoryCard from "../Category/CategoryCard";
 
 export default function CategorySlider() {
   const swiperRef = useRef(null);
