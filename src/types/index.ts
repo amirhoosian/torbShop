@@ -74,3 +74,13 @@ export interface ProductCardProps {
   originalPrice?: number;
   discount?: number;
 }
+
+export type DealCarouselSectionProps = {
+  reverse?: boolean;
+};
+
+export interface BrandLogoTileProps {
+  name: string;
+  image: string;
+  link: string;
+}
