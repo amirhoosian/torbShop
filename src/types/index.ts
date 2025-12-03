@@ -84,3 +84,9 @@ export interface BrandLogoTileProps {
   image: string;
   link: string;
 }
+
+export interface ProductPageProps {
+  params: {
+    id: string;
+  };
+}

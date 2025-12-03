@@ -1,56 +1,530 @@
 [
   {
     "id": 1,
-    "title": "گوشی هوشمند پیشرفته",
-    "price": 899,
-    "description": "گوشی هوشمند با دوربین پیشرفته و عملکرد بالا",
-    "category": "electronics",
-    "image": "/images/products/1-18.webp",
-    "rating": { "rate": 4.5, "count": 120 }
+    "title": "MacBook Air Silver",
+    "image": "/images/1-6-150x150.png",
+    "price": 999,
+    "category": "Laptop",
+    "description": "MacBook Air نقره‌ای با طراحی سبک و پردازنده قوی."
   },
   {
     "id": 2,
-    "title": "گوشی هوشمند پریمیوم",
-    "price": 1299,
-    "description": "گوشی هوشمند پریمیوم با طراحی مدرن و ویژگی‌های پیشرفته",
-    "category": "electronics",
-    "image": "/images/products/1112249_22_600x600_t_g.webp",
-    "rating": { "rate": 4.8, "count": 150 }
+    "title": "MacBook Air Silver Large",
+    "image": "/images/1-6-300x300.png",
+    "price": 1099,
+    "category": "Laptop",
+    "description": "نسخه بزرگ‌تر MacBook Air نقره‌ای با نمایشگر با کیفیت‌تر."
   },
   {
     "id": 3,
-    "title": "گوشی هوشمند کلاسیک",
-    "price": 599,
-    "description": "گوشی هوشمند با طراحی کلاسیک و عملکرد قابل اعتماد",
-    "category": "electronics",
-    "image": "/images/products/13-2.webp",
-    "rating": { "rate": 4.3, "count": 200 }
+    "title": "iPhone 13 Purple",
+    "image": "/images/1-11-150x150.png",
+    "price": 699,
+    "category": "Phone",
+    "description": "iPhone 13 بنفش با طراحی زیبا و دوربین پیشرفته."
   },
   {
     "id": 4,
-    "title": "گوشی هوشمند اقتصادی",
-    "price": 399,
-    "description": "گوشی هوشمند با قیمت مناسب و کیفیت خوب",
-    "category": "electronics",
-    "image": "/images/products/3-7.webp",
-    "rating": { "rate": 4.2, "count": 180 }
+    "title": "iPhone 13 Purple Large",
+    "image": "/images/1-11-300x300.png",
+    "price": 749,
+    "category": "Phone",
+    "description": "نسخه بزرگ‌تر iPhone 13 بنفش با صفحه نمایش بزرگ‌تر."
   },
   {
     "id": 5,
-    "title": "گوشی هوشمند مدرن",
-    "price": 799,
-    "description": "گوشی هوشمند با طراحی مدرن و قابلیت‌های پیشرفته",
-    "category": "electronics",
-    "image": "/images/products/7-11.webp",
-    "rating": { "rate": 4.6, "count": 140 }
+    "title": "MacBook Air Gold",
+    "image": "/images/1-18-150x150.png",
+    "price": 999,
+    "category": "Laptop",
+    "description": "MacBook Air طلایی با طراحی جذاب و عملکرد عالی."
   },
   {
     "id": 6,
-    "title": "گوشی هوشمند حرفه‌ای",
+    "title": "MacBook Air Gold Large",
+    "image": "/images/1-18-300x300.png",
+    "price": 1099,
+    "category": "Laptop",
+    "description": "نسخه بزرگ MacBook Air طلایی با نمایشگر بهتر."
+  },
+  {
+    "id": 7,
+    "title": "PS5 Controller White",
+    "image": "/images/1-19-150x150.png",
+    "price": 69,
+    "category": "Console",
+    "description": "دسته بازی PS5 سفید با کنترل دقیق و راحتی بالا."
+  },
+  {
+    "id": 8,
+    "title": "PS5 Controller White Large",
+    "image": "/images/1-19-300x300.png",
+    "price": 79,
+    "category": "Console",
+    "description": "نسخه بزرگ‌تر دسته PS5 سفید برای تجربه بهتر بازی."
+  },
+  {
+    "id": 9,
+    "title": "Coffee Machine Silver",
+    "image": "/images/1-20-150x150.png",
+    "price": 129,
+    "category": "Appliance",
+    "description": "دستگاه قهوه ساز نقره‌ای برای آماده‌سازی سریع و راحت قهوه."
+  },
+  {
+    "id": 10,
+    "title": "Coffee Machine Silver Large",
+    "image": "/images/1-20-300x300.png",
+    "price": 149,
+    "category": "Appliance",
+    "description": "نسخه بزرگ‌تر دستگاه قهوه ساز نقره‌ای با ظرفیت بیشتر."
+  },
+  {
+    "id": 11,
+    "title": "MacBook Pro Purple Wallpaper",
+    "image": "/images/2-17-150x150.png",
+    "price": 1299,
+    "category": "Laptop",
+    "description": "MacBook Pro با والپیپر بنفش و عملکرد قدرتمند."
+  },
+  {
+    "id": 12,
+    "title": "MacBook Pro Purple Wallpaper Large",
+    "image": "/images/2-17-300x300.png",
+    "price": 1399,
+    "category": "Laptop",
+    "description": "نسخه بزرگ‌تر MacBook Pro با والپیپر بنفش و نمایشگر بهتر."
+  },
+  {
+    "id": 13,
+    "title": "PS5 Console + Controller",
+    "image": "/images/2-18-150x150.png",
+    "price": 499,
+    "category": "Console",
+    "description": "کنسول PS5 به همراه دسته سفید برای تجربه کامل بازی."
+  },
+  {
+    "id": 14,
+    "title": "PS5 Console + Controller Large",
+    "image": "/images/2-18-300x300.png",
+    "price": 549,
+    "category": "Console",
+    "description": "نسخه بزرگ‌تر کنسول PS5 با کنترل و بسته کامل."
+  },
+  {
+    "id": 15,
+    "title": "Smart Speaker Mini",
+    "image": "/images/2-19-150x150.png",
+    "price": 49,
+    "category": "Gadget",
+    "description": "اسپیکر هوشمند کوچک با کیفیت صدای مناسب."
+  },
+  {
+    "id": 16,
+    "title": "Smart Speaker Mini Large",
+    "image": "/images/2-19-300x300.png",
+    "price": 59,
+    "category": "Gadget",
+    "description": "نسخه بزرگ‌تر اسپیکر هوشمند با صدای بلندتر."
+  },
+  {
+    "id": 17,
+    "title": "iPhone 13 Blue",
+    "image": "/images/3-7-150x150.png",
+    "price": 699,
+    "category": "Phone",
+    "description": "iPhone 13 آبی با طراحی شیک و دوربین عالی."
+  },
+  {
+    "id": 18,
+    "title": "iPhone 13 Blue Large",
+    "image": "/images/3-7-300x300.png",
+    "price": 749,
+    "category": "Phone",
+    "description": "نسخه بزرگ‌تر iPhone 13 آبی با صفحه نمایش بهتر."
+  },
+  {
+    "id": 19,
+    "title": "White USB Desk Fan",
+    "image": "/images/3-8-300x300.png",
+    "price": 29,
+    "category": "Appliance",
+    "description": "پنکه رومیزی سفید با اتصال USB و کارکرد ساده."
+  },
+  {
+    "id": 20,
+    "title": "MacBook Air M1",
+    "image": "/images/3-15-150x150.png",
+    "price": 899,
+    "category": "Laptop",
+    "description": "MacBook Air با پردازنده M1 و عملکرد سریع."
+  },
+  {
+    "id": 21,
+    "title": "MacBook Air M1 Large",
+    "image": "/images/3-15-300x300.png",
     "price": 999,
-    "description": "گوشی هوشمند حرفه‌ای برای کاربران پیشرفته",
-    "category": "electronics",
-    "image": "/images/products/7-5.webp",
-    "rating": { "rate": 4.7, "count": 110 }
+    "category": "Laptop",
+    "description": "نسخه بزرگ‌تر MacBook Air M1 با نمایشگر بهتر."
+  },
+  {
+    "id": 22,
+    "title": "PS5 Console White",
+    "image": "/images/3-16-150x150.png",
+    "price": 499,
+    "category": "Console",
+    "description": "کنسول PS5 سفید با طراحی کلاسیک و عملکرد بالا."
+  },
+  {
+    "id": 23,
+    "title": "PS5 Console White Large",
+    "image": "/images/3-16-300x300.png",
+    "price": 549,
+    "category": "Console",
+    "description": "نسخه بزرگ‌تر کنسول PS5 سفید با امکانات کامل."
+  },
+  {
+    "id": 24,
+    "title": "Hisense Air Purifier",
+    "image": "/images/3-17-150x150.png",
+    "price": 199,
+    "category": "Appliance",
+    "description": "تصفیه کننده هوا Hisense برای هوای پاک و تازه."
+  },
+  {
+    "id": 25,
+    "title": "Hisense Air Purifier Large",
+    "image": "/images/3-17-300x300.png",
+    "price": 219,
+    "category": "Appliance",
+    "description": "نسخه بزرگ‌تر تصفیه کننده هوا Hisense با ظرفیت بیشتر."
+  },
+  {
+    "id": 26,
+    "title": "iPhone 12 Gold",
+    "image": "/images/4-8-150x150.png",
+    "price": 599,
+    "category": "Phone",
+    "description": "iPhone 12 طلایی با طراحی زیبا و دوربین مناسب."
+  },
+  {
+    "id": 27,
+    "title": "iPhone 12 Gold Large",
+    "image": "/images/4-8-300x300.png",
+    "price": 649,
+    "category": "Phone",
+    "description": "نسخه بزرگ‌تر iPhone 12 طلایی با صفحه نمایش بهتر."
+  },
+  {
+    "id": 28,
+    "title": "PS5 Controller Twin Pack",
+    "image": "/images/4-18-150x150.png",
+    "price": 129,
+    "category": "Console",
+    "description": "دو دسته PS5 سفید برای تجربه چند نفره."
+  },
+  {
+    "id": 29,
+    "title": "PS5 Controller Twin Pack Large",
+    "image": "/images/4-18-300x300.png",
+    "price": 149,
+    "category": "Console",
+    "description": "نسخه بزرگ‌تر دو دسته PS5 برای بازی راحت‌تر."
+  },
+  {
+    "id": 30,
+    "title": "Air Fryer Black",
+    "image": "/images/4-19-150x150.png",
+    "price": 99,
+    "category": "Appliance",
+    "description": "سرخ‌کن بدون روغن مشکی برای غذاهای سالم."
+  },
+  {
+    "id": 31,
+    "title": "Air Fryer Black Large",
+    "image": "/images/4-19-300x300.png",
+    "price": 119,
+    "category": "Appliance",
+    "description": "نسخه بزرگ‌تر سرخ‌کن بدون روغن مشکی."
+  },
+  {
+    "id": 32,
+    "title": "iPhone 15 Blue",
+    "image": "/images/5-1-150x150.png",
+    "price": 799,
+    "category": "Phone",
+    "description": "iPhone 15 آبی با طراحی مدرن و دوربین پیشرفته."
+  },
+  {
+    "id": 33,
+    "title": "iPhone 15 Blue Large",
+    "image": "/images/5-1-300x300.png",
+    "price": 849,
+    "category": "Phone",
+    "description": "نسخه بزرگ‌تر iPhone 15 آبی با صفحه نمایش بهتر."
+  },
+  {
+    "id": 34,
+    "title": "MacBook Pro Pink",
+    "image": "/images/5-14-150x150.png",
+    "price": 1399,
+    "category": "Laptop",
+    "description": "MacBook Pro صورتی با عملکرد عالی و طراحی جذاب."
+  },
+  {
+    "id": 35,
+    "title": "MacBook Pro Pink Large",
+    "image": "/images/5-14-300x300.png",
+    "price": 1499,
+    "category": "Laptop",
+    "description": "نسخه بزرگ‌تر MacBook Pro صورتی با نمایشگر بهتر."
+  },
+  {
+    "id": 36,
+    "title": "Xbox Series S",
+    "image": "/images/5-15-150x150.png",
+    "price": 299,
+    "category": "Console",
+    "description": "کنسول Xbox Series S کوچک با بازی روان و سریع."
+  },
+  {
+    "id": 37,
+    "title": "Xbox Series S Large",
+    "image": "/images/5-15-300x300.png",
+    "price": 349,
+    "category": "Console",
+    "description": "نسخه بزرگ‌تر Xbox Series S با امکانات کامل."
+  },
+  {
+    "id": 38,
+    "title": "Apple Watch 8 White",
+    "image": "/images/5-16-150x150.png",
+    "price": 399,
+    "category": "Gadget",
+    "description": "اپل واچ سفید سری ۸ با امکانات هوشمند و طراحی شیک."
+  },
+  {
+    "id": 39,
+    "title": "Apple Watch 8 White Large",
+    "image": "/images/5-16-300x300.png",
+    "price": 449,
+    "category": "Gadget",
+    "description": "نسخه بزرگ‌تر اپل واچ سفید سری ۸ با صفحه نمایش بهتر."
+  },
+  {
+    "id": 40,
+    "title": "Snowa Logo",
+    "image": "/images/6.png",
+    "price": 0,
+    "category": "Brand",
+    "description": "لوگوی برند Snowa برای محصولات مختلف."
+  },
+  {
+    "id": 41,
+    "title": "iPhone 13 Green",
+    "image": "/images/6-11-150x150.png",
+    "price": 699,
+    "category": "Phone",
+    "description": "iPhone 13 سبز با طراحی جذاب و دوربین عالی."
+  },
+  {
+    "id": 42,
+    "title": "iPhone 13 Green Large",
+    "image": "/images/6-11-300x300.png",
+    "price": 749,
+    "category": "Phone",
+    "description": "نسخه بزرگ‌تر iPhone 13 سبز با نمایشگر بهتر."
+  },
+  {
+    "id": 43,
+    "title": "MacBook Air Gold 2022",
+    "image": "/images/6-19-150x150.png",
+    "price": 1099,
+    "category": "Laptop",
+    "description": "MacBook Air طلایی ۲۰۲۲ با پردازنده قوی و طراحی مدرن."
+  },
+  {
+    "id": 44,
+    "title": "MacBook Air Gold 2022 Large",
+    "image": "/images/6-19-300x300.png",
+    "price": 1199,
+    "category": "Laptop",
+    "description": "نسخه بزرگ‌تر MacBook Air طلایی ۲۰۲۲ با نمایشگر بهتر."
+  },
+  {
+    "id": 45,
+    "title": "Xbox Series X Camo Edition",
+    "image": "/images/6-20-300x300.png",
+    "price": 499,
+    "category": "Console",
+    "description": "Xbox Series X نسخه Camo با طراحی خاص و قدرت بالا."
+  },
+  {
+    "id": 46,
+    "title": "Air Fryer White",
+    "image": "/images/6-21-150x150.png",
+    "price": 99,
+    "category": "Appliance",
+    "description": "سرخ‌کن بدون روغن سفید برای پخت سالم."
+  },
+  {
+    "id": 47,
+    "title": "Air Fryer White Large",
+    "image": "/images/6-21-300x300.png",
+    "price": 119,
+    "category": "Appliance",
+    "description": "نسخه بزرگ‌تر سرخ‌کن بدون روغن سفید."
+  },
+  {
+    "id": 48,
+    "title": "Xiaomi Redmi 12 Black",
+    "image": "/images/7-5-150x150.png",
+    "price": 199,
+    "category": "Phone",
+    "description": "گوشی شیائومی Redmi 12 مشکی با طراحی مدرن."
+  },
+  {
+    "id": 49,
+    "title": "Xiaomi Redmi 12 Black Large",
+    "image": "/images/7-5-300x300.png",
+    "price": 219,
+    "category": "Phone",
+    "description": "نسخه بزرگ‌تر Redmi 12 مشکی با صفحه نمایش بهتر."
+  },
+  {
+    "id": 50,
+    "title": "Gaming Laptop Red Lightning",
+    "image": "/images/7-11-150x150.png",
+    "price": 1299,
+    "category": "Laptop",
+    "description": "لپ‌تاپ گیمینگ قرمز با قدرت پردازش بالا."
+  },
+  {
+    "id": 51,
+    "title": "Gaming Laptop Red Lightning Large",
+    "image": "/images/7-11-300x300.png",
+    "price": 1399,
+    "category": "Laptop",
+    "description": "نسخه بزرگ‌تر لپ‌تاپ گیمینگ قرمز با نمایشگر بهتر."
+  },
+  {
+    "id": 52,
+    "title": "White Air Fryer Pro",
+    "image": "/images/7-12-150x150.png",
+    "price": 149,
+    "category": "Appliance",
+    "description": "سرخ‌کن پرو سفید برای پخت سریع و سالم."
+  },
+  {
+    "id": 53,
+    "title": "White Air Fryer Pro Large",
+    "image": "/images/7-12-300x300.png",
+    "price": 169,
+    "category": "Appliance",
+    "description": "نسخه بزرگ‌تر سرخ‌کن پرو سفید با ظرفیت بیشتر."
+  },
+  {
+    "id": 54,
+    "title": "Xiaomi Redmi Note Pink",
+    "image": "/images/8-3-150x150.png",
+    "price": 299,
+    "category": "Phone",
+    "description": "Xiaomi Redmi Note صورتی با طراحی جذاب."
+  },
+  {
+    "id": 55,
+    "title": "Xiaomi Redmi Note Pink Large",
+    "image": "/images/8-3-300x300.png",
+    "price": 319,
+    "category": "Phone",
+    "description": "نسخه بزرگ‌تر Redmi Note صورتی با صفحه نمایش بهتر."
+  },
+  {
+    "id": 56,
+    "title": "Xbox Series X",
+    "image": "/images/11-1-150x150.png",
+    "price": 499,
+    "category": "Console",
+    "description": "کنسول Xbox Series X با قدرت گرافیکی بالا."
+  },
+  {
+    "id": 57,
+    "title": "Xbox Series X Large",
+    "image": "/images/11-1-300x300.png",
+    "price": 549,
+    "category": "Console",
+    "description": "نسخه بزرگ‌تر Xbox Series X با امکانات کامل."
+  },
+  {
+    "id": 58,
+    "title": "iPhone 14 Pro Silver",
+    "image": "/images/12-3-150x150.png",
+    "price": 799,
+    "category": "Phone",
+    "description": "iPhone 14 Pro نقره‌ای با دوربین پیشرفته و طراحی شیک."
+  },
+  {
+    "id": 59,
+    "title": "iPhone 14 Pro Silver Large",
+    "image": "/images/12-3-300x300.png",
+    "price": 849,
+    "category": "Phone",
+    "description": "نسخه بزرگ‌تر iPhone 14 Pro نقره‌ای با نمایشگر بهتر."
+  },
+  {
+    "id": 60,
+    "title": "Sony WH1000 Headphones Black",
+    "image": "/images/13-2-150x150.png",
+    "price": 199,
+    "category": "Gadget",
+    "description": "هدفون سونی مشکی WH1000 با کیفیت صدای عالی."
+  },
+  {
+    "id": 61,
+    "title": "Sony WH1000 Headphones Black Large",
+    "image": "/images/13-2-300x300.png",
+    "price": 219,
+    "category": "Gadget",
+    "description": "نسخه بزرگ‌تر هدفون سونی مشکی WH1000 با کیفیت بهتر."
+  },
+  {
+    "id": 62,
+    "title": "Apple Logo",
+    "image": "/images/apple.png",
+    "price": 0,
+    "category": "Brand",
+    "description": "لوگوی برند Apple برای محصولات مختلف."
+  },
+  {
+    "id": 63,
+    "title": "Blog Icon",
+    "image": "/images/Blog-150x150.png",
+    "price": 0,
+    "category": "Icon",
+    "description": "آیکون بلاگ برای استفاده در وب‌سایت‌ها."
+  },
+  {
+    "id": 64,
+    "title": "Laptop Icon",
+    "image": "/images/Laptop-150x150.png",
+    "price": 0,
+    "category": "Icon",
+    "description": "آیکون لپ‌تاپ برای استفاده در طراحی‌ها."
+  },
+  {
+    "id": 65,
+    "title": "Phone Icon",
+    "image": "/images/Phone-150x150.png",
+    "price": 0,
+    "category": "Icon",
+    "description": "آیکون گوشی برای استفاده در طراحی‌ها."
+  },
+  {
+    "id": 66,
+    "title": "Snowa Logo Small",
+    "image": "/images/snowa-small.png",
+    "price": 0,
+    "category": "Brand",
+    "description": "نسخه کوچک لوگوی برند Snowa."
   }
 ]

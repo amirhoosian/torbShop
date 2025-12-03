@@ -56,7 +56,6 @@ export default function Footer() {
               متنوع، باکیفیت و دارای قیمت مناسب را در مدت زمان ی کوتاه به دست
               مشتریان خود برساند و ضمانت بازگشت کالا هم داشته باشد.
             </p>
-
             <Image
               height={50}
               width={100}
@@ -80,8 +79,8 @@ export default function Footer() {
         ))}
       </div>
 
-      <div className="rounded-b-xl py-2 px-4 flex items-center justify-between text-xs border-t-2 border-t-amber-200">
-        <a href="#" className="text-blue-400 hover:underline ml-3">
+      <div className="rounded-b-xl py-2 px-4 flex items-center justify-between text-xs border-t-[0.5px] #f3e5b1">
+        <a href="/" className="text-blue-400 hover:underline ml-3">
           برم بالا ↑
         </a>
 
