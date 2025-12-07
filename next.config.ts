@@ -9,11 +9,7 @@ const nextConfig: NextConfig = {
         hostname: "cdn.pixabay.com",
         pathname: "/**",
       },
-      {
-        protocol: "https",
-        hostname: "upload.wikimedia.org",
-        pathname: "/**",
-      },
+
       {
         protocol: "https",
         hostname: "i.imgur.com",
