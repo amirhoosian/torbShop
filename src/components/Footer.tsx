@@ -32,7 +32,7 @@ const features = [
 
 export default function Footer() {
   return (
-    <footer className="flex w-full flex-col">
+    <footer className="flex w-full flex-col px-5 md:px-0">
       <div className="flex w-full">
         <div className="flex">
           <Image
@@ -50,8 +50,8 @@ export default function Footer() {
         </div>
         <div className="item-end flex flex-1 flex-col gap-4">
           <hr style={{ borderTop: "1px solid #eee", margin: 0 }} />
-          <div className="item-center flex justify-end gap-2">
-            <p className="flex w-[400px] text-[13px]">
+          <div className="md:item-center flex flex-col md:flex-row items-end md:justify-end gap-2">
+            <p className="flex w-[400px] text-[13px] md:order-1 order-2">
               یک خرید اینترنتی مطمئن، نیازمند فروشگاهی است که بتواند کالاهایی
               متنوع، باکیفیت و دارای قیمت مناسب را در مدت زمان ی کوتاه به دست
               مشتریان خود برساند و ضمانت بازگشت کالا هم داشته باشد.
@@ -61,12 +61,13 @@ export default function Footer() {
               width={100}
               alt="Footer Logo"
               src="/images/templates/base/footer-logo-1.svg"
+              className="order-1 md:order-2"
             />
           </div>
         </div>
       </div>
 
-      <div className="w-full flex justify-around gap-12 my-8">
+      <div className="w-full flex flex-wrap justify-around gap-12 my-8">
         {features.map((feature, index) => (
           <div key={index} className="flex  items-center gap-2.5">
             <div className="flex flex-col gap-1">

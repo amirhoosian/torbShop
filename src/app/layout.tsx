@@ -29,10 +29,10 @@ export default function RootLayout({
   return (
     <html lang="fa">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} container min-h-screen flex flex-col mx-auto antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} container min-h-screen grid grid-rows[auto_1fr_auto] mx-auto antialiased`}
       >
         <Navbar />
-        <main className="flex-1 container mx-auto">{children}</main>
+        <main className="py-6 overflow-y-auto">{children}</main>
         <Footer />
       </body>
     </html>
