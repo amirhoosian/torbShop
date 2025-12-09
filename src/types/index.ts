@@ -75,9 +75,9 @@ export interface ProductCardProps {
   discount?: number;
 }
 
-export type DealCarouselSectionProps = {
+export interface DealCarouselSectionProps {
   reverse?: boolean;
-};
+}
 
 export interface BrandLogoTileProps {
   name: string;
