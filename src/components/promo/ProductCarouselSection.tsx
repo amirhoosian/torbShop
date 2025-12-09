@@ -60,7 +60,7 @@ export default function ProductCarouselSection() {
               title={product.title}
               price={product.price}
               originalPrice={product.originalPrice}
-              discount={product.discount}
+              discount={Number(product.discount)}
             />
           </SwiperSlide>
         ))}

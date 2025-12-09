@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css"; // add extra css imports for modules you use (navigation, pagination, etc.)
 import "swiper/css/navigation";
-
+import { Swiper as SwiperType } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import type { Category } from "@/types";
@@ -12,7 +12,7 @@ import type { Category } from "@/types";
 import CategoryCard from "../Category/CategoryCard";
 
 export default function CategorySlider() {
-  const swiperRef = useRef(null);
+  const swiperRef = useRef<SwiperType | null>(null);
   const [categories, setCategories] = useState<Category[]>([]);
   useEffect(() => {
     fetch("/api/categories")
