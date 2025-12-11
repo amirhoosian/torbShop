@@ -102,30 +102,31 @@ export default function Navbar() {
       </div>
 
       {/* MOBILE LAYOUT */}
-      <div className="flex w-full flex-col md:hidden">
+      <div className="flex w-full max-w-full flex-col md:hidden px-0.5">
         <div className="flex justify-between">
           <Image
             src="/images/templates/base/header-logo-mobile.svg"
             alt="Mobile Logo"
-            width={100}
-            height={100}
+            width={50}
+            height={50}
+            className="w-11 h-auto max-w-[desired]"
           />
 
           <button
             type="button"
-            className="flex items-center justify-center p-2"
+            className="flex items-center justify-center p-0.5"
           >
-            <User size={20} className="text-gray-700" />
+            <User size={16} className="text-gray-700" />
           </button>
         </div>
         <div className="w-full h-[2px] bg-amber-100 mt-1 mb-1" />
 
-        <div className="flex w-full items-center justify-between gap-4 px-3 py-2">
+        <div className="flex w-full items-center justify-between gap-1 px-1 py-1">
           {/* left icons */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2">
             {/* cart with badge */}
             <button type="button" className="relative text-gray-700">
-              <ShoppingCart size={22} />
+              <ShoppingCart size={16} />
               <span className="absolute -right-1 -top-1 flex h-4 w-4 items-center justify-center rounded-full bg-red-500 text-[10px] text-white">
                 0
               </span>
@@ -133,27 +134,24 @@ export default function Navbar() {
 
             {/* grid icon */}
             <button type="button" className="text-gray-700">
-              <Grid3X3 size={22} />
+              <Grid3X3 size={14} />
             </button>
 
             {/* filter icon */}
             <button className="text-gray-700">
-              <Filter size={22} />
+              <Filter size={14} />
             </button>
           </div>
 
           {/* search text + icon */}
-          <button
-            type="button"
-            className="flex items-center gap-2 text-sm text-gray-500"
-          >
+          <div className="flex items-center gap-1 text-xs text-gray-500 flex-1 px-2 py-1 rounded-md border border-gray-300">
             <input
               type="text"
               placeholder="Search product"
-              className="w-full bg-transparent text-xs outline-none"
+              className="w-full bg-transparent outline-none text-[10px]"
             />
-            <Search size={18} />
-          </button>
+            <Search size={14} />
+          </div>
         </div>
       </div>
 
