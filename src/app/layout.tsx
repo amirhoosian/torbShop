@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 
 import "../styles/globals.css";
-import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,10 +29,10 @@ export default function RootLayout({
   return (
     <html lang="fa">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} w-full md:container min-h-screen grid grid-rows-[auto_1fr_auto] mx-auto antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} container mx-auto grid min-h-screen w-full grid-rows-[auto_1fr_auto] antialiased`}
       >
         <Navbar />
-        <main className="py-2 md:py-6 overflow-y-auto">{children}</main>
+        <main className="overflow-y-auto py-2 md:py-6">{children}</main>
         <Footer />
       </body>
     </html>

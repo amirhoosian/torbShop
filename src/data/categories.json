@@ -4,14 +4,14 @@
     "name": "الکترونیک",
     "slug": "electronics",
     "description": "گوشی، لپتاپ، تبلت و سایر محصولات دیجیتال",
-    "image": "https://i.imgur.com/1.png"
+    "image": "/images/3-15-150x150.png"
   },
   {
     "id": 2,
     "name": "گوشی موبایل",
     "slug": "mobile",
     "description": "انواع گوشی‌های هوشمند جدید",
-    "image": "https://i.imgur.com/2.png",
+    "image": "/images/3-7-150x150.png",
     "parentId": 1
   },
   {
@@ -19,7 +19,7 @@
     "name": "لپتاپ",
     "slug": "laptop",
     "description": "لپتاپ‌های حرفه‌ای و گیمینگ",
-    "image": "https://i.imgur.com/3.png",
+    "image": "/images/3-15-150x150.png",
     "parentId": 1
   },
   {
@@ -27,7 +27,7 @@
     "name": "تبلت",
     "slug": "tablet",
     "description": "تبلت‌های سبک و سریع",
-    "image": "https://i.imgur.com/4.png",
+    "image": "/images/3-15-150x150.png",
     "parentId": 1
   },
   {
@@ -35,23 +35,22 @@
     "name": "ساعت هوشمند",
     "slug": "smartwatch",
     "description": "ساعت‌های هوشمند و اسپرت",
-    "image": "https://i.imgur.com/5.png",
+    "image": "/images/5-16-150x150.png",
     "parentId": 1
   },
-
   {
     "id": 6,
     "name": "پوشاک",
     "slug": "clothing",
     "description": "لباس مردانه، زنانه و بچگانه برای تمام فصول",
-    "image": "https://i.imgur.com/6.png"
+    "image": "/images/7-11-150x150.png"
   },
   {
     "id": 7,
     "name": "مردانه",
     "slug": "men",
     "description": "پوشاک اسپرت و رسمی مردانه",
-    "image": "https://i.imgur.com/7.png",
+    "image": "/images/7-11-150x150.png",
     "parentId": 6
   },
   {
@@ -59,7 +58,7 @@
     "name": "زنانه",
     "slug": "women",
     "description": "لباس‌های مجلسی و راحتی زنانه",
-    "image": "https://i.imgur.com/8.png",
+    "image": "/images/8-3-150x150.png",
     "parentId": 6
   },
   {
@@ -67,7 +66,7 @@
     "name": "بچگانه",
     "slug": "kids",
     "description": "پوشاک مناسب کودکان",
-    "image": "https://i.imgur.com/9.png",
+    "image": "/images/8-3-150x150.png",
     "parentId": 6
   },
   {
@@ -75,7 +74,7 @@
     "name": "اکسسوری",
     "slug": "accessories",
     "description": "کیف، کمربند و کلاه",
-    "image": "https://i.imgur.com/10.png",
+    "image": "/images/7-11-150x150.png",
     "parentId": 6
   }
 ]

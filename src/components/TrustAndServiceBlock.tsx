@@ -3,6 +3,8 @@
 import BrandLogoTile from "./UI/BrandLogoTile";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import { useRef } from "react";
+import type { Swiper as SwiperType } from "swiper";
 
 const brandData = [
   {
@@ -44,12 +46,18 @@ const brandData = [
 ];
 
 export const TrustAndServiceBlock = () => {
+  const swiperRef = useRef<SwiperType | null>(null);
+
   return (
-    <div className="w-full  mt-10 mb-10">
+    <div className="w-full  mt-10 mb-10 relative group">
       <Swiper
         spaceBetween={16}
-        slidesPerView={2}
+        slidesPerView={1.2}
+        onSwiper={(swiper) => (swiperRef.current = swiper)}
         breakpoints={{
+          300: {
+            slidesPerView: 1.2,
+          },
           640: {
             slidesPerView: 3,
           },
@@ -71,6 +79,25 @@ export const TrustAndServiceBlock = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+
+      <button
+        onClick={() => swiperRef.current?.slidePrev()}
+        className="cat-prev absolute left-[-7px] top-[50%] z-10 -translate-y-1/2 rounded-[8px]
+                     bg-white border border-stone-200 px-4 py-1.5 opacity-0
+                     pointer-events-none transition
+                     group-hover:opacity-100 group-hover:pointer-events-auto"
+      >
+        ‹
+      </button>
+      <button
+        onClick={() => swiperRef.current?.slideNext()}
+        className="cat-next absolute right-[-7px] top-[50%] z-10 -translate-y-1/2 rounded-[8px]
+                     bg-white border border-stone-200 px-4 py-1.5 opacity-0
+                     pointer-events-none transition
+                     group-hover:opacity-100 group-hover:pointer-events-auto"
+      >
+        ›
+      </button>
     </div>
   );
 };

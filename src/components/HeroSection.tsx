@@ -5,6 +5,7 @@ import type { NavigationOptions } from "swiper/types";
 import { useEffect, useRef, useState } from "react";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+
 import type { Product } from "@/types";
 
 import BannerSlider from "./sliders/BannerCard";
@@ -40,8 +41,8 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="grid grid-cols-1 items-stretch gap-4 md:grid-cols-[30%_70%]">
-      <div className="relative flex h-full items-stretch">
+    <section className="grid grid-cols-1 gap-4 md:grid-cols-[30%_70%] md:items-stretch">
+      <div className="relative order-2 mx-3 flex h-full items-stretch md:order-1 md:mx-0">
         <div className="absolute top-3 left-3 z-20 flex items-center gap-2">
           <button
             className="size-8 rounded-md bg-white/90 text-pink-600 shadow-sm hover:bg-gray-100"
@@ -64,6 +65,11 @@ export default function HeroSection() {
           slidesPerView={1}
           spaceBetween={20}
           autoplay={{ delay: 4000, disableOnInteraction: false }}
+          breakpoints={{
+            0: { spaceBetween: 8, slidesPerView: 1 },
+            400: { spaceBetween: 12 },
+            640: { spaceBetween: 20 },
+          }}
           loop
           modules={[Autoplay, Navigation]}
           onBeforeInit={(swiper) => {
@@ -95,7 +101,12 @@ export default function HeroSection() {
         </Swiper>
       </div>
 
-      {banners.length > 0 && <BannerSlider banners={banners} />}
+      {banners.length > 0 && (
+        <div className="order-1 px-3 md:order-2 md:px-0">
+          {" "}
+          <BannerSlider banners={banners} />{" "}
+        </div>
+      )}
     </section>
   );
 }
