@@ -20,3 +20,7 @@ body {
     @apply w-4 h-2 bg-white opacity-100 scale-110;
   }
 }
+
+html {
+  font-family: var(--font-yekanbakh), system-ui, sans-serif;
+}

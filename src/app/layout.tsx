@@ -1,19 +1,18 @@
 import type { Metadata } from "next";
 
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 
 import "../styles/globals.css";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const yekanbakh = localFont({
+  src: [
+    { path: "./fonts/yekanbakh/regular-fanum.woff", weight: "400" },
+    { path: "./fonts/yekanbakh/medium-fanum.woff", weight: "500" },
+    { path: "./fonts/yekanbakh/bold-fanum.woff", weight: "700" },
+  ],
+  variable: "--font-yekanbakh",
 });
 
 export const metadata: Metadata = {
@@ -29,10 +28,12 @@ export default function RootLayout({
   return (
     <html lang="fa">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} container mx-auto grid min-h-screen w-full grid-rows-[auto_1fr_auto] antialiased`}
+        className={`${yekanbakh.variable} container mx-auto grid min-h-screen w-full grid-rows-[auto_1fr_auto] antialiased`}
       >
         <Navbar />
-        <main className="overflow-y-auto py-2 md:py-6">{children}</main>
+        <main className="overflow-y-auto overflow-x-hidden py-2 md:py-6 md:px-2">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

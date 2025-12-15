@@ -27,14 +27,14 @@ export default function ProductCarouselSection() {
         {/* Left Side (RTL): "View All" link */}
         <a
           href="/products/bestsellers"
-          className="text-blue-600 hover:text-blue-800 text-sm font-medium transition flex items-center gap-1"
+          className="text-gray-400 hover:text-red-400 text-sm font-medium transition flex items-center gap-1"
         >
           مشاهده همه
           {/* Optional: Add a small arrow icon here */}
         </a>
 
         {/* Right Side (RTL): Title */}
-        <h2 className="text-[15px] md:text-2xl font-bold text-gray-800">
+        <h2 className="text-[15px] md:text-[18px]  text-gray-500">
           پرفروش ترین محصولات
         </h2>
       </div>

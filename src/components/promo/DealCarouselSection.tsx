@@ -29,15 +29,15 @@ const DealCarouselSection = ({ reverse = false }: DealCarouselSectionProps) => {
   }, []);
 
   return (
-    <div className=" mt-12  w-full px-4 md:px-0">
+    <div className="mt-12 w-full px-4 md:px-0">
       <div
-        className={`flex gap-4 items-center w-full flex-col md:flex-row ${reverse ? "md:flex-row-reverse" : ""}`}
+        className={`flex gap-4 items-stretch  w-full flex-col md:flex-row ${reverse ? "md:flex-row-reverse" : ""}`}
       >
         <FeaturePromoBox />
         <div className="w-full md:w-auto md:flex-1 md:min-w-0 relative group">
           <Swiper
             slidesPerView={1}
-            spaceBetween={10}
+            spaceBetween={12}
             modules={[Navigation, Navigation]}
             navigation={{
               nextEl: ".deal-next",

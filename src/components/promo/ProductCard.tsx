@@ -15,14 +15,17 @@ const ProductCard: React.FC<ProductCardProps> = ({
   const formatPrice = (price: number) => price.toLocaleString("fa-IR");
 
   return (
-    <div className=" w-fw-full  md:w-[320px] p-3 md:p-6 border border-gray-200 rounded-xl bg-white  shadow-sm hover:shadow-md transition duration-300 flex flex-col items-center">
+    <div
+      className=" w-fw-full  md:w-[320px] md:h-[380px]
+ p-3 md:p-6 border border-gray-200 rounded-xl bg-white  shadow-sm hover:shadow-md transition duration-300 flex flex-col items-center"
+    >
       {/* 1. Product Image Area */}
       <div className="relative h-52 flex items-center justify-center mb-4">
         <Image
           src={image}
           alt={title}
-          width={180} // Set fixed size for the image container
-          height={180}
+          width={100} // Set fixed size for the image container
+          height={100}
           // The image itself should be centered and contained
           className="object-contain sm:w-[50px] md:w-auto"
         />

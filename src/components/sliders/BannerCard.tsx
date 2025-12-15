@@ -12,7 +12,6 @@ export default function BannerSlider({ banners }: { banners: Banner[] }) {
   const swiperRef = useRef<any>(null);
   const [active, setActive] = useState(0);
 
-  // وقتی اسلاید عوض میشه، index فعال رو تنظیم کن
   useEffect(() => {
     const swiper = swiperRef.current;
     if (!swiper) return;
@@ -23,10 +22,10 @@ export default function BannerSlider({ banners }: { banners: Banner[] }) {
   }, []);
 
   return (
-    <div className="relative w-full overflow-hidden rounded-2xl select-none">
+    <div className="relative w-full overflow-hidden rounded-2xl select-none md:px-3.5">
       {/* === Swiper === */}
       <Swiper
-        className="rounded-2xl"
+        className="w-full"
         slidesPerView={1}
         autoplay={{ delay: 4000, disableOnInteraction: false }}
         loop
@@ -35,11 +34,11 @@ export default function BannerSlider({ banners }: { banners: Banner[] }) {
       >
         {banners.map((b, i) => (
           <SwiperSlide key={b.id}>
-            <div className="relative aspect-[2/1] overflow-hidden rounded-2xl sm:aspect-[2.5/1]">
+            <div className="relative aspect-[2/1] overflow-hidden rounded-2xl sm:aspect-[2.5/1">
               <Image
                 fill
                 alt={`banner-${b.id}`}
-                className="object-cover"
+                className="object-cover md:object-center"
                 src={b.image}
                 priority={i === 0}
               />
