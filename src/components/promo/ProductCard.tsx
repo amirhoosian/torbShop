@@ -1,10 +1,14 @@
 // components/ProductCard.jsx
-
+"use client";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+
 import React from "react";
+
 import type { ProductCardProps } from "@/types";
 
 const ProductCard: React.FC<ProductCardProps> = ({
+  id,
   image,
   title,
   price,
@@ -12,10 +16,28 @@ const ProductCard: React.FC<ProductCardProps> = ({
   discount,
 }) => {
   // Helper function to format the price for display
-  const formatPrice = (price: number) => price.toLocaleString("fa-IR");
+  const formatPriceNumber = (priceValue: number) => {
+    return priceValue.toLocaleString("fa-IR");
+  };
+
+  const router = useRouter();
+
+  const goToProduct = () => {
+    if (id) {
+      router.push(`/product/${id}`);
+    }
+  };
 
   return (
     <div
+      onClick={goToProduct}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          goToProduct();
+        }
+      }}
+      role="button"
+      tabIndex={0}
       className=" w-fw-full  md:w-[320px] md:h-[380px]
  p-3 md:p-6 border border-gray-200 rounded-xl bg-white  shadow-sm hover:shadow-md transition duration-300 flex flex-col items-center"
     >
@@ -44,7 +66,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
 
           {/* Current Price (Large and Bold) */}
           <p className="text-3xl font-extrabold text-gray-900 leading-none">
-            {formatPrice(price)}
+            {formatPriceNumber(price)}
           </p>
         </div>
 
@@ -63,22 +85,23 @@ const ProductCard: React.FC<ProductCardProps> = ({
 
               {/* Original Price (Strikethrough) */}
               <span className="text-sm line-through text-gray-500 ml-2">
-                {formatPrice(originalPrice)}
+                {formatPriceNumber(originalPrice)}
               </span>
             </div>
           )}
 
           {/* 4. Add to Cart Button (Bottom Right) */}
           <button
+            type="button"
             className="p-3 rounded-xl shadow-lg hover:opacity-80 transition"
             style={{ backgroundColor: "#ED1943" }}
             aria-label={`افزودن به سبد خرید`}
           >
             {/* Shopping Cart Icon SVG */}
             <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
               height="24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"

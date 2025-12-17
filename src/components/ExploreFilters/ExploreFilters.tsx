@@ -25,7 +25,7 @@ const ExploreFilters = () => {
   return (
     <div
       dir="rtl"
-      className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4"
+      className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 mb-8 md:mb-0"
     >
       {products.slice(0, 5).map((p, idx) => (
         <ProductsCard

@@ -4,9 +4,9 @@ import ExploreFilters from "@/components/ExploreFilters/ExploreFilters";
 
 const Explore = () => {
   return (
-    <div className="w-full max-w-screen-2xl mx-auto p-4 h-screen">
+    <div className="w-full max-w-screen-2xl mx-auto p-4 min-h-screen">
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4 h-full">
-        <div className="h-full  md:col-span-3">
+        <div className="h-full md:col-span-3">
           <ExploreFilters />
         </div>
         <div className=" h-full  md:col-span-1">

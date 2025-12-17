@@ -71,6 +71,7 @@ export default function ProductCarouselSection() {
         {bestSellingProducts.map((product) => (
           <SwiperSlide key={product.id}>
             <ProductCard
+              id={product.id}
               image={product.image}
               title={product.title}
               price={product.price}

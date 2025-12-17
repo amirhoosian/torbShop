@@ -44,7 +44,7 @@ export default function ProductDetailPage() {
     <div className="mx-auto mt-8 w-full text-right">
       <div className="flex flex-col-reverse justify-between md:flex-row">
         <div className="flex flex-1 flex-col space-x-10 md:flex-row">
-          <div className="mx-auto w-full md:mx-0 md:w-auto">
+          <div className="mx-auto w-full md:mx-0 md:px-3.5 order-2 md:order-1">
             <div className="mx-auto flex w-full flex-1 flex-col gap-4 rounded-2xl border-2 border-stone-300 bg-white p-5 md:mx-0 md:w-[500px]">
               <div className="w-max rounded-lg bg-pink-500 px-3 py-1 text-sm text-white">
                 ٪۵۰
@@ -69,7 +69,7 @@ export default function ProductDetailPage() {
               </button>
             </div>
           </div>
-          <div className="flex w-full flex-col gap-10 px-2.5 md:w-auto md:px-0">
+          <div className="flex w-full flex-col gap-10 px-2.5 md:w-auto md:px-0 order-1 md:order-2">
             <p className="text-base font-semibold md:text-lg">
               {product.title}
             </p>

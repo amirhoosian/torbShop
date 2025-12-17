@@ -90,7 +90,7 @@ export default function Footer() {
         <a href="/" className="text-blue-400 hover:underline ml-3">
           برم بالا ↑
         </a>
-        h <span className="text-xs">توسعه توسط امیر روحیان</span>
+        <span className="text-xs">توسعه توسط امیر روحیان</span>
       </div>
     </footer>
   );

@@ -7,11 +7,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 import type { Banner } from "@/types";
+import { useRouter } from "next/navigation";
 
 export default function BannerSlider({ banners }: { banners: Banner[] }) {
   const swiperRef = useRef<any>(null);
   const [active, setActive] = useState(0);
-
+  const router = useRouter();
   useEffect(() => {
     const swiper = swiperRef.current;
     if (!swiper) return;
@@ -34,7 +35,18 @@ export default function BannerSlider({ banners }: { banners: Banner[] }) {
       >
         {banners.map((b, i) => (
           <SwiperSlide key={b.id}>
-            <div className="relative aspect-[2/1] overflow-hidden rounded-2xl sm:aspect-[2.5/1">
+            <div
+              onClick={() => router.push("/explore")}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  router.push("/explore");
+                }
+              }}
+              tabIndex={0}
+              role="button"
+              className="relative aspect-[2/1] overflow-hidden rounded-2xl sm:aspect-[2.5/1]"
+            >
               <Image
                 fill
                 alt={`banner-${b.id}`}
