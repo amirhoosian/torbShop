@@ -91,3 +91,8 @@ export interface ProductPageProps {
     id: string;
   };
 }
+
+export interface FilterModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
