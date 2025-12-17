@@ -9,7 +9,7 @@ const Explore = () => {
         <div className="h-full md:col-span-3">
           <ExploreFilters />
         </div>
-        <div className=" h-full  md:col-span-1">
+        <div className="hidden md:grid  h-full  md:col-span-1">
           <div className="space-y-4 w-full">
             <Accordion
               title="دسته بندی"
