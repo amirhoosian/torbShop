@@ -1,17 +1,21 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
-import FeaturePromoBox from "./FeaturePromoBox";
-import ProductCard from "./ProductCard";
-import { fetcher } from "@/lib/fetcher";
-import type { Product } from "@/types";
-import { Swiper, SwiperSlide } from "swiper/react";
+
 import type { Swiper as SwiperType } from "swiper";
 
+import React, { useEffect, useRef, useState } from "react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Pagination, Navigation } from "swiper/modules";
-import type { DealCarouselSectionProps } from "@/types";
+import { Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import type { DealCarouselSectionProps, Product } from "@/types";
+
+import { fetcher } from "@/lib/fetcher";
+
+import FeaturePromoBox from "./FeaturePromoBox";
+import ProductCard from "./ProductCard";
+
 const DealCarouselSection = ({ reverse = false }: DealCarouselSectionProps) => {
   const [products, setProducts] = useState<Product[]>([]);
   const swiperRef = useRef<SwiperType | null>(null);
@@ -25,7 +29,7 @@ const DealCarouselSection = ({ reverse = false }: DealCarouselSectionProps) => {
       }
     };
 
-    getProducts();
+    void getProducts();
   }, []);
 
   return (
