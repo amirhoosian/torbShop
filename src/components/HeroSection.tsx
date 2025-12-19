@@ -92,6 +92,7 @@ export default function HeroSection() {
           {products.map((product) => (
             <SwiperSlide key={product.id}>
               <ProductCard
+                id={product.id}
                 image={product.image ?? ""}
                 price={product.price}
                 title={product.title}

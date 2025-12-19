@@ -1,13 +1,26 @@
 "use client";
 import { ProductCardProps } from "@/types";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { title } from "process";
 
-const ProductsCard = ({ image, title, price }: ProductCardProps) => {
+const ProductsCard = ({ image, title, price, id }: ProductCardProps) => {
+  const router = useRouter();
   return (
-    <div className="relative flex h-full flex-col items-center justify-between rounded-2xl px-16 py-10 border-2 border-stone-400 ">
+    <div
+      role="button"
+      tabIndex={0}
+      onClick={() => router.push(`/product/${id}`)}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          router.push(`/product/${id}`);
+        }
+      }}
+      className="relative flex h-full flex-col items-center justify-between rounded-2xl px-16 py-10 border-2 border-stone-400 "
+    >
       <div
-        className="  flex size-40 items-center justify-center rounded-full bg-white bg-contain bg-center bg-no-repeat"
+        className="flex size-40 items-center justify-center rounded-full bg-white bg-contain bg-center bg-no-repeat"
         style={{
           backgroundImage:
             "url('/images/routes/home/hero-offer-slider-wave-bg.svg')",

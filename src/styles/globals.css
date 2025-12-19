@@ -21,6 +21,26 @@ body {
   }
 }
 
+@theme {
+  --animate-myprogress: myprogress 4s linear forwards;
+
+  @keyframes myprogress {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+}
+
+@layer utilities {
+  .animate-myprogress {
+    animation: var(--animate-myprogress);
+    width: 0;
+  }
+}
+
 html {
   font-family: var(--font-yekanbakh), system-ui, sans-serif;
 }

@@ -67,7 +67,8 @@ const DealCarouselSection = ({ reverse = false }: DealCarouselSectionProps) => {
             {products.map((product) => (
               <SwiperSlide key={product.id}>
                 <ProductCard
-                  image={product.image || ""}
+                  id={product.id}
+                  image={product.image ?? ""}
                   title={product.title}
                   price={product.price}
                 />
