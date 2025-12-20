@@ -63,5 +63,3 @@ torbShop/
 💬 [Issues](https://github.com/amirhoosian/torbShop/issues) برای باگ/پیشنهاد
 
 ***
-
-کافیه اینو کپی کنی تو `README.md`! حالا tech stack واقعی پروژه‌ت چیه؟
