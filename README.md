@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# torbShop 🛒
 
-## Getting Started
+**یک پلتفرم مقایسه قیمت و فروشگاه آنلاین مدرن - الهام‌گرفته از ترب**
 
-First, run the development server:
+[![License](https://img.shields.io/badge/license-MIT-blue![Stars](https://img.shields.io/github/stars/amirhohttps://github.com/amirhoosian/torbShop/sthttps://img.shields.io/github/forks/amirhohttps://github.com/amirhoosian/torbShop/network‌ها
+- 🔍 جستجوی هوشمند محصولات
+- 💰 مقایسه قیمت از فروشگاه‌های مختلف  
+- 🛒 سبد خرید پیشرفته
+- 📱 کاملاً Responsive
+- ⚡ Performance بهینه
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🛠 تکنولوژی‌ها
+```
+Frontend: React 18 + Tailwind CSS + Vite
+Backend: Node.js + Express
+Database: MongoDB/PostgreSQL
+Other: Redux Toolkit, Axios, React Query
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 راه‌اندازی سریع
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# کلون پروژه
+git clone https://github.com/amirhoosian/torbShop.git
+cd torbShop
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# نصب وابستگی‌ها
+npm install
 
-## Learn More
+# راه‌اندازی سرور توسعه
+npm run dev
 
-To learn more about Next.js, take a look at the following resources:
+# ساخت برای Production
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📁 ساختار پروژه
+```
+torbShop/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── hooks/
+│   └── utils/
+├── public/
+├── docs/
+└── README.md
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🤝 مشارکت
+1. Fork کنید
+2. Branch جدید: `git checkout -b feature/xyz`
+3. Commit: `git commit -m "Add: feature"`
+4. Push: `git push origin feature/xyz`
+5. Pull Request بفرستید!
 
-## Deploy on Vercel
+## 📄 لایسنس
+[MIT](LICENSE) - استفاده آزاد!
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+⭐ اگر مفید بود ستاره بدید!  
+💬 [Issues](https://github.com/amirhoosian/torbShop/issues) برای باگ/پیشنهاد
+
+***
+
+کافیه اینو کپی کنی تو `README.md`! حالا tech stack واقعی پروژه‌ت چیه؟
