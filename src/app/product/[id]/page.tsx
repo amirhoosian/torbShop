@@ -20,16 +20,18 @@ export default function ProductDetailPage() {
   if (!product) return null;
 
   return (
-    <div className="mx-auto mt-8 w-full text-right md:max-w-6xl md:px-4">
+    <div className="mx-auto mt-8 w-full text-right md:max-w-7xl md:px-4">
       <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:items-start md:gap-8">
         <div className="order-1 flex justify-center md:order-3">
           <ProductImage
-            size={300}
+            size={380}
             alt={product.title}
             priority
-            images={
-              product.image ? [product.image, product.image, product.image] : []
-            }
+            images={[
+              { id: "main-1", src: product.image! },
+              { id: "main-2", src: product.image! },
+              { id: "main-3", src: product.image! },
+            ]}
           />
         </div>
 

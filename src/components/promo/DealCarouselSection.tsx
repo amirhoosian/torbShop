@@ -89,6 +89,7 @@ const DealCarouselSection = ({ reverse = false }: DealCarouselSectionProps) => {
             ‹
           </button>
           <button
+            type="button"
             onClick={() => swiperRef.current?.slideNext()}
             className="deal-prev absolute right-[-10px] top-[50%] z-10 -translate-y-1/2 rounded-[8px]
                          bg-white border border-stone-200 px-4 py-1.5 opacity-0
