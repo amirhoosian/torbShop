@@ -1,13 +1,13 @@
 "use client";
 
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { Autoplay, Navigation } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 import type { Banner } from "@/types";
-import { useRouter } from "next/navigation";
 
 export default function BannerSlider({ banners }: { banners: Banner[] }) {
   const swiperRef = useRef<any>(null);
@@ -23,7 +23,7 @@ export default function BannerSlider({ banners }: { banners: Banner[] }) {
   }, []);
 
   return (
-    <div className="relative w-full overflow-hidden rounded-2xl select-none md:px-3.5">
+    <div className="relative w-full cursor-pointer overflow-hidden rounded-2xl select-none md:px-3.5">
       {/* === Swiper === */}
       <Swiper
         className="w-full"
@@ -40,6 +40,8 @@ export default function BannerSlider({ banners }: { banners: Banner[] }) {
         {banners.map((b, i) => (
           <SwiperSlide key={b.id}>
             <div
+              className="relative aspect-[2/1] overflow-hidden rounded-2xl sm:aspect-[2.5/1]"
+              tabIndex={0}
               onClick={() => router.push("/explore")}
               onKeyDown={(e) => {
                 if (e.key === "Enter" || e.key === " ") {
@@ -47,9 +49,7 @@ export default function BannerSlider({ banners }: { banners: Banner[] }) {
                   router.push("/explore");
                 }
               }}
-              tabIndex={0}
               role="button"
-              className="relative aspect-[2/1] overflow-hidden rounded-2xl sm:aspect-[2.5/1]"
             >
               <Image
                 fill
@@ -75,8 +75,8 @@ export default function BannerSlider({ banners }: { banners: Banner[] }) {
 
         <button
           type="button"
-          className="banner-slider__next  rounded-[8px]
-                     bg-white border border-stone-200 px-4 py-1.5"
+          className="banner-slider__next item-center flex size-6 justify-center rounded-[8px]
+                     border border-stone-200 bg-white px-4"
         >
           ‹
         </button>
@@ -89,12 +89,12 @@ export default function BannerSlider({ banners }: { banners: Banner[] }) {
               <div
                 key={banner.id}
                 className={`
-          relative h-3.5 overflow-hidden bg-gray-400 transition-all duration-300
-          ${isActive ? "w-9 rounded-2xl" : "w-3.5 rounded-full"}
+          relative h-2 overflow-hidden bg-gray-400 transition-all duration-300
+          ${isActive ? "w-7 rounded-2xl" : "w-3.5 rounded-full"}
         `}
               >
                 {i === active && (
-                  <div className="absolute left-0 top-0 h-full bg-white w-0 animate-myprogress" />
+                  <div className="absolute top-0 left-0 h-full w-0 animate-myprogress bg-white" />
                 )}
               </div>
             );
@@ -105,8 +105,8 @@ export default function BannerSlider({ banners }: { banners: Banner[] }) {
 
         <button
           type="button"
-          className="banner-slider__prev   rounded-[8px]
-                     bg-white border border-stone-200 px-4 py-1.5"
+          className="banner-slider__prev item-center flex size-6 justify-center rounded-md
+                     border border-stone-200 bg-white px-4"
         >
           ›
         </button>

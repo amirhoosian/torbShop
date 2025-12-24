@@ -12,7 +12,7 @@ export default function DesktopNav() {
   const popular = ["گوشی", "لپ‌تاپ", "ساعت"];
 
   return (
-    <div className="hidden md:flex w-full items-center justify-between px-2 py-7">
+    <div className="hidden md:flex w-full items-center justify-between py-7">
       <div className="flex">
         <Image
           height={100}
@@ -67,21 +67,30 @@ export default function DesktopNav() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center gap-6">
-        <div className="flex cursor-pointer items-center gap-2 rounded-lg border border-gray-300 px-4 py-2 hover:bg-gray-50">
-          <User size={18} className="text-gray-600" />
-          <Link className="text-sm text-gray-700" href="/login">
+      <div className="flex flex-col items-end gap-8">
+        <div className="flex cursor-pointer items-center gap-1 rounded-lg group">
+          <Link
+            className="text-sm font-bold text-gray-900 group-hover:text-[#ff1e56]"
+            href="/login"
+          >
             وارد شوید
           </Link>
+          <User
+            size={20}
+            className="font-bold text-gray-900 group-hover:text-[#ff1e56]"
+          />
         </div>
-        <div className="relative flex flex-col gap-2">
+        <div className="relative flex flex-col gap-2 border border-[#E2E8F0] p-3 rounded-lg">
           <div
-            className="flex items-center gap-2"
+            className="flex items-center gap-2 cursor-pointer py-0.5 px-1"
             onMouseEnter={() => setIsOpen(true)}
             onMouseLeave={() => setIsOpen(false)}
           >
+            <span className="rounded-full bg-red-500 px-2 py-1 text-xs font-semibold text-white">
+              0
+            </span>
+            <span className="text-sm font-bold text-gray-700"> سبدخرید </span>
             <ShoppingCart size={20} className="text-gray-600" />
-            <span className="text-sm text-gray-600">۰ تومان</span>
           </div>
 
           {isOpen && (

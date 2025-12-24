@@ -31,9 +31,7 @@ export default function RootLayout({
         className={`${yekanbakh.variable} container mx-auto grid min-h-screen w-full grid-rows-[auto_1fr_auto] antialiased`}
       >
         <Navbar />
-        <main className="overflow-y-auto overflow-x-hidden py-2 md:py-6 md:px-2">
-          {children}
-        </main>
+        <main className="overflow-y-auto overflow-x-hidden">{children}</main>
         <Footer />
       </body>
     </html>

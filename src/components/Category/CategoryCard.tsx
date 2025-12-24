@@ -8,9 +8,9 @@ export default function CategoryCard({ name, image }: CategoryCardProps) {
   return (
     <div
       dir="ltr"
-      className="flex cursor-pointer items-start justify-end rounded-2xl border bg-white p-3 transition-all hover:-translate-y-1"
+      className="flex cursor-pointer items-start justify-end rounded-2xl border bg-white p-3 transition-all hover:border-s-stone-200"
     >
-      <div className="flex flex-col items-start justify-center mt-2">
+      <div className="mt-2 flex flex-col items-start justify-center">
         <h3 className="text-sm font-bold text-gray-800">{name}</h3>
       </div>
 

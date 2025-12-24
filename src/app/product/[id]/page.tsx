@@ -8,16 +8,12 @@ import { useProduct } from "@/hooks/useProduct";
 
 export default function ProductDetailPage() {
   const { id } = useParams<{ id: string }>();
-  const { product, loading, error } = useProduct(id);
+  const productApi = useProduct();
+  const { data: product, isLoading, error } = productApi.ProductById(id);
 
-  if (loading)
-    return (
-      <div>
-        <p>Loding.....</p>
-      </div>
-    );
-  if (error) return <div>`{error}`</div>;
-  if (!product) return null;
+  if (!id) return <div>Invalid product id</div>;
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>Something went wrong</div>;
 
   return (
     <div className="mx-auto mt-8 w-full text-right md:max-w-7xl md:px-4">

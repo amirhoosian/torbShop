@@ -9,7 +9,6 @@ export default function CountdownTimer() {
     const timer = setInterval(() => {
       setTimeLeft((prev) => {
         if (prev <= 0) {
-          // اگه تموم شد، دوباره از ۴ ساعت شروع کن
           return FOUR_HOURS;
         }
         return prev - 1;
@@ -17,16 +16,24 @@ export default function CountdownTimer() {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, []);
+  });
 
   const hours = Math.floor(timeLeft / 3600);
   const minutes = Math.floor((timeLeft % 3600) / 60);
   const seconds = timeLeft % 60;
   return (
-    <div className="flex items-center justify-center text-white text-sm gap-1 font-bold">
-      <span>{String(hours).padStart(2, "0")}</span> :
-      <span>{String(minutes).padStart(2, "0")}</span> :
-      <span>{String(seconds).padStart(2, "0")}</span>
+    <div className="flex items-center justify-center gap-1 text-sm font-bold text-white">
+      <span className="rounded-lg bg-gray-600/30 p-1.5">
+        {String(hours).padStart(2, "0")}
+      </span>{" "}
+      :
+      <span className="rounded-lg bg-gray-600/30 p-1.5">
+        {String(minutes).padStart(2, "0")}
+      </span>{" "}
+      :
+      <span className="rounded-lg bg-gray-600/30 p-1.5">
+        {String(seconds).padStart(2, "0")}
+      </span>
     </div>
   );
 }

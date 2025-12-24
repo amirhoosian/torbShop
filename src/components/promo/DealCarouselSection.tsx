@@ -35,19 +35,14 @@ const DealCarouselSection = ({ reverse = false }: DealCarouselSectionProps) => {
   return (
     <div className="mt-12 w-full px-4 md:px-0">
       <div
-        className={`flex gap-4 items-stretch  w-full flex-col md:flex-row ${reverse ? "md:flex-row-reverse" : ""}`}
+        className={`flex w-full flex-col items-stretch gap-4 md:flex-row ${reverse ? "md:flex-row-reverse" : ""}`}
       >
         <FeaturePromoBox />
-        <div className="w-full md:w-auto md:flex-1 md:min-w-0 relative group">
+        <div className="group relative w-full md:w-auto md:min-w-0 md:flex-1">
           <Swiper
+            className="w-full"
             slidesPerView={1}
             spaceBetween={12}
-            modules={[Navigation, Navigation]}
-            navigation={{
-              nextEl: ".deal-next",
-              prevEl: ".deal-prev",
-            }}
-            onSwiper={(swiper) => (swiperRef.current = swiper)}
             breakpoints={{
               300: {
                 slidesPerView: 1,
@@ -66,35 +61,41 @@ const DealCarouselSection = ({ reverse = false }: DealCarouselSectionProps) => {
                 spaceBetween: 50,
               },
             }}
-            className=" w-full"
+            modules={[Navigation, Navigation]}
+            navigation={{
+              nextEl: ".deal-next",
+              prevEl: ".deal-prev",
+            }}
+            onSwiper={(swiper) => (swiperRef.current = swiper)}
           >
             {products.map((product) => (
               <SwiperSlide key={product.id}>
                 <ProductCard
                   id={product.id}
                   image={product.image ?? ""}
-                  title={product.title}
                   price={product.price}
+                  title={product.title}
                 />
               </SwiperSlide>
             ))}
           </Swiper>
           <button
+            type="button"
             onClick={() => swiperRef.current?.slidePrev()}
-            className="deal-next absolute left-[-10px] top-[50%] z-10 -translate-y-1/2 rounded-[8px]
-                         bg-white border border-stone-200 px-4 py-1.5 opacity-0
-                         pointer-events-none transition
-                         group-hover:opacity-100 group-hover:pointer-events-auto"
+            className="deal-next pointer-events-none absolute top-[50%] left-2.5 z-10 -translate-y-1/2
+                         rounded-lg border border-stone-200 bg-white px-4 py-1.5
+                         opacity-0 transition
+                         group-hover:pointer-events-auto group-hover:opacity-100"
           >
             ‹
           </button>
           <button
             type="button"
             onClick={() => swiperRef.current?.slideNext()}
-            className="deal-prev absolute right-[-10px] top-[50%] z-10 -translate-y-1/2 rounded-[8px]
-                         bg-white border border-stone-200 px-4 py-1.5 opacity-0
-                         pointer-events-none transition
-                         group-hover:opacity-100 group-hover:pointer-events-auto"
+            className="deal-prev pointer-events-none absolute top-[50%] right-[-10px] z-10 -translate-y-1/2
+                         rounded-lg border border-stone-200 bg-white px-4 py-1.5
+                         opacity-0 transition
+                         group-hover:pointer-events-auto group-hover:opacity-100"
           >
             ›
           </button>

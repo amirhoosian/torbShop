@@ -1,33 +1,34 @@
-import { useEffect, useState } from "react";
+import {
+  fetchList,
+  fetchOne,
+  useProductStore,
+} from "@/data/store/productStore";
 
-import type { Product } from "@/types";
+export function useProduct() {
+  const snapshot = useProductStore();
 
-import { getProduct } from "@/services/productService";
+  const AllProduct = () => {
+    if (snapshot.listStatus === "idle") {
+      void fetchList();
+    }
 
-export function useProduct(id: string) {
-  const [product, setProduct] = useState<Product | null>(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    if (!id) return;
-
-    const fetchProduct = async () => {
-      setLoading(true);
-      setError(null);
-
-      try {
-        const data = await getProduct(id);
-        setProduct(data);
-      } catch {
-        setError("Failed to fetch product");
-      } finally {
-        setLoading(false);
-      }
+    return {
+      data: snapshot.list,
+      isLoding: snapshot.listStatus === "loading",
+      error: snapshot.error,
     };
+  };
 
-    void fetchProduct();
-  }, [id]);
+  const ProductById = (id: string) => {
+    if (id && !snapshot.byId[id] && snapshot.oneStatus[id] !== "loading") {
+      void fetchOne(id);
+    }
+    return {
+      data: snapshot.byId[id],
+      isLoading: snapshot.oneStatus[id] === "loading",
+      error: snapshot.error,
+    };
+  };
 
-  return { product, loading, error };
+  return { AllProduct, ProductById };
 }
