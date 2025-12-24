@@ -1,6 +1,6 @@
 # torbShop 🛒
 
-**یک پلتفرم مقایسه قیمت و فروشگاه آنلاین مدرن - الهام‌گرفته از ترب**
+**یک پلتفرم مقایسه قیمت و فروشگاه آنلاین مدرن - الهام‌گرفته از شاپی**
 
 [![License](https://img.shields.io/badge/license-MIT-blue![Stars](https://img.shields.io/github/stars/amirhohttps://github.com/amirhoosian/torbShop/sthttps://img.shields.io/github/forks/amirhohttps://github.com/amirhoosian/torbShop/network‌ها
 - 🔍 جستجوی هوشمند محصولات
