@@ -1,14 +1,14 @@
 "use client";
-import { ProductCardProps } from "@/types";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { title } from "process";
+
+import type { ProductCardProps } from "@/types";
 
 const ProductsCard = ({ image, title, price, id }: ProductCardProps) => {
   const router = useRouter();
   return (
     <div
-      role="button"
+      className="relative flex size-full flex-col items-center justify-between rounded-2xl border-2 border-stone-400 px-16 py-10"
       tabIndex={0}
       onClick={() => router.push(`/product/${id}`)}
       onKeyDown={(e) => {
@@ -17,7 +17,7 @@ const ProductsCard = ({ image, title, price, id }: ProductCardProps) => {
           router.push(`/product/${id}`);
         }
       }}
-      className="relative flex h-full flex-col items-center justify-between rounded-2xl px-16 py-10 border-2 border-stone-400 "
+      role="button"
     >
       <div
         className="flex size-40 items-center justify-center rounded-full bg-white bg-contain bg-center bg-no-repeat"
@@ -39,7 +39,7 @@ const ProductsCard = ({ image, title, price, id }: ProductCardProps) => {
       <div className="my-auto">
         <p>{title}</p>
       </div>
-      <div className="flex  flex-col w-full  px-3 mt-4 ">
+      <div className="mt-4 flex w-full flex-col px-3">
         <div className="flex items-center gap-2">
           <span className="rounded-md bg-white px-2 py-1 text-sm font-bold text-pink-600">
             12%

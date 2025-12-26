@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
-import { ProductCardProps } from "@/types";
+
+import type { ProductCardProps } from "@/types";
+
 import ProductsCard from "../ProductsCard";
 
 const ExploreFilters = () => {
@@ -25,14 +27,14 @@ const ExploreFilters = () => {
   return (
     <div
       dir="rtl"
-      className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 mb-8 md:mb-0"
+      className="mb-8 grid grid-cols-1 gap-4 sm:grid-cols-2 md:mb-0 lg:grid-cols-4"
     >
       {products.slice(0, 5).map((p, idx) => (
         <ProductsCard
-          key={`${p.title ?? "product"}-${idx}`}
-          title={p.title}
           image={p.image}
+          key={`${p.title ?? "product"}-${idx}`}
           price={p.price}
+          title={p.title}
         />
       ))}
     </div>

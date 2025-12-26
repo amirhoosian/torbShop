@@ -1,34 +1,23 @@
-import {
-  fetchList,
-  fetchOne,
-  useProductStore,
-} from "@/data/store/productStore";
+"use client";
 
-export function useProduct() {
-  const snapshot = useProductStore();
+import { useQuery } from "@tanstack/react-query";
 
-  const AllProduct = () => {
-    if (snapshot.listStatus === "idle") {
-      void fetchList();
-    }
+import { queryKeys } from "@/lib/queryKeys";
+import { getAllProducts, getProduct } from "@/services/productService";
 
-    return {
-      data: snapshot.list,
-      isLoding: snapshot.listStatus === "loading",
-      error: snapshot.error,
-    };
+export function productsApi() {
+  return {
+    useList: () =>
+      useQuery({
+        queryKey: queryKeys.products.all,
+        queryFn: getAllProducts,
+      }),
+
+    useDetail: (id: number | string) =>
+      useQuery({
+        queryKey: queryKeys.products.detail(id),
+        queryFn: () => getProduct(id),
+        enabled: !!id,
+      }),
   };
-
-  const ProductById = (id: string) => {
-    if (id && !snapshot.byId[id] && snapshot.oneStatus[id] !== "loading") {
-      void fetchOne(id);
-    }
-    return {
-      data: snapshot.byId[id],
-      isLoading: snapshot.oneStatus[id] === "loading",
-      error: snapshot.error,
-    };
-  };
-
-  return { AllProduct, ProductById };
 }

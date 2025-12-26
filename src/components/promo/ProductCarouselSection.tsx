@@ -1,19 +1,22 @@
 "use client";
-import ProductCard from "./ProductCard";
-import products from "@/data/products.json";
-import { Swiper, SwiperSlide } from "swiper/react";
+import type { Swiper as SwiperType } from "swiper";
+
+import { useRef } from "react";
 import { Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import { useRef } from "react";
-import type { Swiper as SwiperType } from "swiper";
+
+import products from "@/data/products.json";
+
+import ProductCard from "./ProductCard";
 
 // Ensure ProductCard is imported correctly
 // Ensure your product data array is imported or fetched here
 const bestSellingProducts = products.slice(0, 6).map((p) => ({
   ...p,
   originalPrice: p.price * 1.2,
-  discount: "10%",
+  discount: 60,
 }));
 
 export default function ProductCarouselSection() {
@@ -21,34 +24,29 @@ export default function ProductCarouselSection() {
 
   return (
     // 1. Outer Container: Sets max width and centers the section
-    <div className="mx-auto w-full mt-12 px-4 group relative">
+    <div className="group relative mx-auto mt-12 w-full px-4">
       {/* 2. Header Row: Title ("پرفروش ترین محصولات") and "View All" link */}
-      <div className="flex w-full justify-between items-center mb-6 border-b border-gray-200 pb-2">
+      <div className="mb-6 flex w-full items-center justify-between border-b border-gray-200 pb-2">
         {/* Left Side (RTL): "View All" link */}
         <a
+          className="flex items-center gap-1 text-sm font-medium text-gray-400 transition hover:text-red-400"
           href="/products/bestsellers"
-          className="text-gray-400 hover:text-red-400 text-sm font-medium transition flex items-center gap-1"
         >
           مشاهده همه
           {/* Optional: Add a small arrow icon here */}
         </a>
 
         {/* Right Side (RTL): Title */}
-        <h2 className="text-[15px] md:text-[18px]  text-gray-500">
+        <h2 className="text-[15px] text-gray-500 md:text-[18px]">
           پرفروش ترین محصولات
         </h2>
       </div>
 
       {/* 3. Product Grid/Row */}
       <Swiper
-        modules={[Navigation]}
-        navigation={{
-          nextEl: ".best-next",
-          prevEl: ".best-prev",
-        }}
-        spaceBetween={10}
+        className="pb-4"
         slidesPerView={1}
-        onSwiper={(swiper) => (swiperRef.current = swiper)}
+        spaceBetween={10}
         breakpoints={{
           300: {
             slidesPerView: 1,
@@ -66,35 +64,42 @@ export default function ProductCarouselSection() {
             slidesPerView: 5,
           },
         }}
-        className="pb-4"
+        modules={[Navigation]}
+        navigation={{
+          nextEl: ".best-next",
+          prevEl: ".best-prev",
+        }}
+        onSwiper={(swiper) => (swiperRef.current = swiper)}
       >
         {bestSellingProducts.map((product) => (
           <SwiperSlide key={product.id}>
             <ProductCard
               id={product.id}
               image={product.image}
-              title={product.title}
               price={product.price}
+              title={product.title}
+              discount={product.discount}
               originalPrice={product.originalPrice}
-              discount={Number(product.discount)}
             />
           </SwiperSlide>
         ))}
       </Swiper>
 
       <button
-        className="best-prev absolute left-[-7px] top-[50%] z-10 -translate-y-1/2 rounded-[8px]
-                     bg-white border border-stone-200 px-4 py-1.5 opacity-0
-                     pointer-events-none transition
-                     group-hover:opacity-100 group-hover:pointer-events-auto"
+        type="button"
+        className="best-prev pointer-events-none absolute top-[50%] left-[-7px] z-10 -translate-y-1/2
+                     rounded-[8px] border border-stone-200 bg-white px-4 py-1.5
+                     opacity-0 transition
+                     group-hover:pointer-events-auto group-hover:opacity-100"
       >
         ‹
       </button>
       <button
-        className="best-next absolute right-[-7px] top-[50%] z-10 -translate-y-1/2 rounded-[8px]
-                     bg-white border border-stone-200 px-4 py-1.5 opacity-0
-                     pointer-events-none transition
-                     group-hover:opacity-100 group-hover:pointer-events-auto"
+        type="button"
+        className="best-next pointer-events-none absolute top-[50%] right-[-7px] z-10 -translate-y-1/2
+                     rounded-[8px] border border-stone-200 bg-white px-4 py-1.5
+                     opacity-0 transition
+                     group-hover:pointer-events-auto group-hover:opacity-100"
       >
         ›
       </button>

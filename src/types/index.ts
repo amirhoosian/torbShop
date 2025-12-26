@@ -18,6 +18,8 @@ export interface Product {
     rate: number;
     count: number;
   };
+  discount?: number;
+  originalPrice?: number;
 }
 
 export interface CartItem {

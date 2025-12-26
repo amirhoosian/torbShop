@@ -2,9 +2,11 @@ import type { Metadata } from "next";
 
 import localFont from "next/font/local";
 
-import "../styles/globals.css";
+import Providers from "@/app/providers";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/NavBar/Navbar";
+
+import "../styles/globals.css";
 
 const yekanbakh = localFont({
   src: [
@@ -30,9 +32,11 @@ export default function RootLayout({
       <body
         className={`${yekanbakh.variable} container mx-auto grid min-h-screen w-full grid-rows-[auto_1fr_auto] antialiased`}
       >
-        <Navbar />
-        <main className="overflow-y-auto overflow-x-hidden">{children}</main>
-        <Footer />
+        <Providers>
+          <Navbar />
+          <main className="overflow-x-hidden overflow-y-auto">{children}</main>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );

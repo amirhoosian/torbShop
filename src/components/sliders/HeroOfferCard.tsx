@@ -25,10 +25,9 @@ export default function HeroOfferSliderCard({
   const nextBtn = useRef<HTMLButtonElement>(null);
   return (
     <div className="relative h-full overflow-hidden rounded-lg bg-rose-600 p-5 text-white md:p-0">
-      {/* تایمر */}
-
       <div className="absolute top-4 left-4 z-20 flex items-center gap-2">
         <button
+          aria-label="btn"
           className="flex size-6 cursor-pointer items-center justify-center rounded-md bg-white text-red-600 hover:bg-gray-100 md:text-[18px]"
           ref={prevBtn}
           type="button"
@@ -42,15 +41,16 @@ export default function HeroOfferSliderCard({
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
             viewBox="0 0 24 24"
           >
             <path d="m15 18-6-6 6-6"></path>
           </svg>
         </button>
         <button
+          aria-label="btn"
           className="flex size-6 cursor-pointer items-center justify-center rounded-md bg-white text-red-600 hover:bg-gray-100 md:text-[18px]"
           ref={nextBtn}
           type="button"
@@ -64,9 +64,9 @@ export default function HeroOfferSliderCard({
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
             stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
             viewBox="0 0 24 24"
           >
             <path d="m9 18 6-6-6-6"></path>
@@ -135,6 +135,7 @@ export default function HeroOfferSliderCard({
 
               {/* دکمه سبد خرید */}
               <button
+                aria-label="افزودن به سبد خرید"
                 className="absolute right-4 bottom-4 cursor-pointer rounded-lg bg-white p-2 text-pink-600 hover:bg-gray-100"
                 type="button"
               >
@@ -146,9 +147,9 @@ export default function HeroOfferSliderCard({
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   viewBox="0 0 24 24"
                 >
                   <path d="M16 10a4 4 0 0 1-8 0"></path>

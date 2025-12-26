@@ -1,6 +1,6 @@
 import type { Product } from "@/types";
 
-export async function getProduct(id: string): Promise<Product> {
+export async function getProduct(id: number | string): Promise<Product> {
   const res = await fetch(`/api/products/${id}`);
   if (!res.ok) throw new Error("Failed to fetch product");
   return res.json();

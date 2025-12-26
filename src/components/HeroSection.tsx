@@ -1,32 +1,25 @@
 "use client";
 
-import { useProduct } from "@/hooks/useProduct";
+import { productsApi } from "@/hooks/useProduct";
 
 import BannerSlider from "./sliders/BannerCard";
 import HeroOfferCard from "./sliders/HeroOfferCard";
 
 export default function HeroSection() {
-  const productApi = useProduct();
-
+  const { useList } = productsApi();
+  const { data: products = [], isLoading } = useList();
   const banners = [
-    {
-      id: 1,
-      image: "/images/products/hero-slider-1.webp",
-    },
-    {
-      id: 2,
-      image: "/images/products/hero-slider-2.webp",
-    },
-    {
-      id: 3,
-      image: "/images/products/hero-slider-3.webp",
-    },
+    { id: 1, image: "/images/products/hero-slider-1.webp" },
+    { id: 2, image: "/images/products/hero-slider-2.webp" },
+    { id: 3, image: "/images/products/hero-slider-3.webp" },
   ];
-
-  const { data: products, isLoding } = productApi.AllProduct();
-
-  if (isLoding) return <div>Loading...</div>;
-  if (!products) return null;
+  if (isLoading) {
+    return (
+      <div className="flex w-full items-center justify-center rounded-xl border p-6">
+        Loading...
+      </div>
+    );
+  }
 
   return (
     <section className="grid grid-cols-1 gap-2 md:grid-cols-[24%_76%] md:items-stretch">
@@ -36,8 +29,7 @@ export default function HeroSection() {
 
       {banners.length > 0 && (
         <div className="order-1 px-3 md:order-2 md:px-0">
-          {" "}
-          <BannerSlider banners={banners} />{" "}
+          <BannerSlider banners={banners} />
         </div>
       )}
     </section>

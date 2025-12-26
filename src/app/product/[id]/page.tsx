@@ -4,16 +4,16 @@ import { useParams } from "next/navigation";
 import ProductImage from "@/components/ProductDetailPage/ProductImage";
 import ProductInfo from "@/components/ProductDetailPage/ProductInfo";
 import ProductPricing from "@/components/ProductDetailPage/ProductPricing";
-import { useProduct } from "@/hooks/useProduct";
+import { productsApi } from "@/hooks/useProduct";
 
 export default function ProductDetailPage() {
   const { id } = useParams<{ id: string }>();
-  const productApi = useProduct();
-  const { data: product, isLoading, error } = productApi.ProductById(id);
+  const { useDetail } = productsApi();
+  const { data: product, isLoading, isError } = useDetail(id);
 
-  if (!id) return <div>Invalid product id</div>;
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Something went wrong</div>;
+  if (isLoading) return <p>Loading...</p>;
+  if (isError) return <p>Error!</p>;
+  if (!product) return <p>محصول پیدا نشد</p>;
 
   return (
     <div className="mx-auto mt-8 w-full text-right md:max-w-7xl md:px-4">
